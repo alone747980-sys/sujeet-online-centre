@@ -6,7 +6,8 @@
 
   <title>Sujeet Online Centre - Official Website</title>
 
-  <meta name="description" content="Sujeet Online Centre - Bihar Board Update, Result, Admit Card, Scholarship, Admission और Latest Updates">
+  <meta name="description"
+    content="Sujeet Online Centre - Bihar Board Update, Result, Admit Card, Scholarship, Admission, Jobs और Latest Updates">
 
   <style>
 
@@ -14,7 +15,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
@@ -31,12 +32,16 @@
     header {
       width: 100%;
       min-height: 75px;
-      background: #ffffff;
+      background: #fff;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       padding: 8px 15px;
+
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -57,8 +62,12 @@
 
     .site-name {
       font-size: 19px;
-      font-weight: bold;
-      color: #111111;
+      font-weight: 800;
+      color: #111;
+    }
+
+    .site-name span {
+      color: #1264d8;
     }
 
     .menu-area {
@@ -70,29 +79,35 @@
     .search-icon {
       font-size: 27px;
       cursor: pointer;
-      color: #222;
     }
 
     .menu-button {
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
-      color: #222;
       user-select: none;
     }
+
 
     /* ================= MENU ================= */
 
     .menu-dropdown {
       display: none;
+
       position: fixed;
       top: 75px;
       right: 10px;
-      width: 240px;
+
+      width: 245px;
+
       background: white;
+
       border-radius: 8px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+
+      box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+
       overflow: hidden;
+
       z-index: 2000;
     }
 
@@ -102,24 +117,34 @@
 
     .menu-dropdown a {
       display: block;
+
       padding: 13px 16px;
+
       color: #222;
+
       border-bottom: 1px solid #eee;
+
       font-size: 14px;
+
       font-weight: bold;
     }
 
     .menu-dropdown a:hover {
-      background: #f1f1f1;
+      background: #f2f2f2;
       color: #1559d6;
     }
+
 
     /* ================= HERO ================= */
 
     .hero {
+
       width: 100%;
+
       min-height: 500px;
+
       padding: 80px 15px 50px;
+
       text-align: center;
 
       background: linear-gradient(
@@ -131,180 +156,303 @@
     }
 
     .hero h1 {
+
       color: white;
+
       font-size: 34px;
+
       line-height: 1.4;
-      max-width: 800px;
+
+      max-width: 850px;
+
       margin: 0 auto 50px;
     }
+
 
     /* ================= SEARCH ================= */
 
     .search-box {
+
       width: 100%;
+
       max-width: 620px;
+
       height: 62px;
+
       margin: auto;
+
       display: flex;
     }
 
     .search-box input {
+
       flex: 1;
+
       height: 100%;
+
       border: none;
+
       outline: none;
+
       padding: 0 20px;
+
       font-size: 18px;
     }
 
     .search-box button {
+
       width: 85px;
+
       height: 100%;
+
       border: none;
-      background: #333333;
+
+      background: #333;
+
       color: white;
+
       font-size: 25px;
+
       cursor: pointer;
     }
+
+    .search-box button:hover {
+      background: #111;
+    }
+
+
+    /* ================= SEARCH STATUS ================= */
+
+    .search-status {
+
+      display: none;
+
+      width: calc(100% - 30px);
+
+      max-width: 1000px;
+
+      margin: 20px auto;
+
+      padding: 15px;
+
+      background: white;
+
+      border-radius: 8px;
+
+      text-align: center;
+
+      font-weight: bold;
+
+      color: #d00000;
+    }
+
 
     /* ================= CARDS ================= */
 
     .cards-container {
+
       width: calc(100% - 30px);
+
       max-width: 1000px;
+
       margin: 25px auto 40px;
+
       padding: 20px;
 
       background: white;
+
       border-radius: 12px;
 
       display: grid;
+
       grid-template-columns: repeat(2, 1fr);
+
       gap: 18px;
 
       box-shadow: 0 3px 15px rgba(0,0,0,0.15);
     }
 
+
     .card {
+
       min-height: 120px;
+
       border-radius: 10px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
 
       text-align: center;
+
       padding: 15px;
 
       color: white;
-      text-decoration: none;
 
       font-size: 19px;
+
       font-weight: bold;
 
       transition: 0.2s;
     }
 
     .card:hover {
+
       transform: translateY(-4px);
+
       box-shadow: 0 7px 15px rgba(0,0,0,0.25);
     }
+
 
     /* ================= CARD COLORS ================= */
 
     .red {
-      background: linear-gradient(135deg, #f20d32, #bd0035);
+      background: linear-gradient(
+        135deg,
+        #f20d32,
+        #bd0035
+      );
     }
 
     .purple {
-      background: linear-gradient(135deg, #9417a9, #4d087b);
+      background: linear-gradient(
+        135deg,
+        #9417a9,
+        #4d087b
+      );
     }
 
     .green {
-      background: linear-gradient(135deg, #18a45b, #087a3d);
+      background: linear-gradient(
+        135deg,
+        #18a45b,
+        #087a3d
+      );
     }
 
     .pink {
-      background: linear-gradient(135deg, #ef13bb, #9d0bbd);
+      background: linear-gradient(
+        135deg,
+        #ef13bb,
+        #9d0bbd
+      );
     }
 
     .blue {
-      background: linear-gradient(135deg, #2945e8, #0923a8);
+      background: linear-gradient(
+        135deg,
+        #2945e8,
+        #0923a8
+      );
     }
 
     .gold {
-      background: linear-gradient(135deg, #a28b10, #625200);
+      background: linear-gradient(
+        135deg,
+        #a28b10,
+        #625200
+      );
     }
 
-    /* ================= EXTRA LINKS ================= */
 
-    .extra-links {
+    /* ================= ALL LINKS ================= */
+
+    .all-links {
+
       width: calc(100% - 30px);
+
       max-width: 1000px;
+
       margin: 0 auto 40px;
-      background: white;
+
       padding: 20px;
+
+      background: white;
+
       border-radius: 12px;
+
       box-shadow: 0 3px 15px rgba(0,0,0,0.12);
     }
 
-    .extra-title {
+    .all-links h2 {
+
       text-align: center;
+
       color: #35109b;
-      font-size: 21px;
+
       margin-bottom: 18px;
+
+      font-size: 21px;
     }
 
-    .extra-grid {
+    .links-grid {
+
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 10px;
     }
 
-    .extra-link {
-      background: #f3f3f3;
-      color: #222;
-      padding: 13px 8px;
-      text-align: center;
-      border-radius: 6px;
-      font-size: 14px;
-      font-weight: bold;
+    .page-link {
+
+      display: block;
+
+      background: #f4f4f4;
+
       border: 1px solid #ddd;
-    }
 
-    .extra-link:hover {
-      background: #e8e8ff;
-      color: #1559d6;
-    }
+      border-radius: 6px;
 
-    /* ================= NO RESULT ================= */
+      padding: 13px 8px;
 
-    #noResult {
-      display: none;
-      width: calc(100% - 30px);
-      max-width: 1000px;
-      margin: -20px auto 30px;
-      background: white;
-      padding: 20px;
       text-align: center;
-      color: #d00000;
+
+      color: #222;
+
+      font-size: 14px;
+
       font-weight: bold;
-      border-radius: 8px;
+
+      transition: 0.2s;
     }
+
+    .page-link:hover {
+
+      background: #e8e8ff;
+
+      color: #1559d6;
+
+      transform: translateY(-2px);
+    }
+
 
     /* ================= FOOTER ================= */
 
     footer {
+
       width: 100%;
-      background: #111111;
+
+      background: #111;
+
       color: white;
+
       text-align: center;
+
       padding: 30px 15px;
+
       margin-top: 20px;
+    }
+
+    footer h3 {
+      margin-bottom: 8px;
     }
 
     footer p {
       margin: 6px 0;
+      font-size: 14px;
     }
 
     .footer-links {
@@ -312,9 +460,13 @@
     }
 
     .footer-links a {
+
       color: white;
-      display: inline-block;
+
       margin: 5px 8px;
+
+      display: inline-block;
+
       font-size: 13px;
     }
 
@@ -322,16 +474,20 @@
       text-decoration: underline;
     }
 
+
     /* ================= MOBILE ================= */
 
-    @media (max-width: 650px) {
+    @media(max-width:650px) {
 
       header {
+
         min-height: 70px;
+
         padding: 7px 10px;
       }
 
       .logo {
+
         width: 50px;
         height: 50px;
       }
@@ -353,57 +509,77 @@
       }
 
       .menu-dropdown {
+
         top: 70px;
+
         right: 8px;
+
         width: 220px;
       }
 
       .hero {
+
         min-height: 520px;
+
         padding: 65px 15px 40px;
       }
 
       .hero h1 {
+
         font-size: 27px;
+
         margin-bottom: 45px;
       }
 
       .search-box {
+
         height: 57px;
       }
 
       .search-box input {
+
         font-size: 16px;
       }
 
       .search-box button {
+
         width: 70px;
       }
 
       .cards-container {
+
         width: calc(100% - 20px);
+
         padding: 15px;
+
         gap: 12px;
       }
 
       .card {
+
         min-height: 105px;
+
         font-size: 16px;
+
         padding: 10px;
       }
 
-      .extra-links {
+      .all-links {
+
         width: calc(100% - 20px);
+
         padding: 15px;
       }
 
-      .extra-grid {
+      .links-grid {
+
         grid-template-columns: 1fr 1fr;
       }
 
     }
 
-    @media (max-width: 380px) {
+
+    @media(max-width:380px) {
 
       .site-name {
         font-size: 14px;
@@ -414,18 +590,23 @@
       }
 
       .card {
+
         font-size: 14px;
+
         min-height: 95px;
       }
 
-      .extra-grid {
+      .links-grid {
+
         grid-template-columns: 1fr;
       }
 
     }
 
   </style>
+
 </head>
+
 
 <body>
 
@@ -447,7 +628,7 @@
     </a>
 
     <div class="site-name">
-      SUJEET ONLINE CENTRE
+      SUJEET <span>ONLINE CENTRE</span>
     </div>
 
   </div>
@@ -455,16 +636,25 @@
 
   <div class="menu-area">
 
+    <!-- SEARCH ICON -->
+
     <div
       class="search-icon"
       onclick="focusSearch()">
+
       🔍
+
     </div>
+
+
+    <!-- MENU -->
 
     <div
       class="menu-button"
       onclick="toggleMenu()">
+
       ☰ MENU
+
     </div>
 
   </div>
@@ -472,39 +662,81 @@
 </header>
 
 
-<!-- ================= MENU ================= -->
+<!-- ================= MENU DROPDOWN ================= -->
 
 <div
   class="menu-dropdown"
   id="menuDropdown">
 
-  <a href="index.html">🏠 Home</a>
 
-  <a href="about.html">ℹ️ About Us</a>
+  <a href="index.html">
+    🏠 Home
+  </a>
 
-  <a href="latest.html">🆕 Latest Update</a>
 
-  <a href="job.html">💼 Latest Jobs</a>
+  <a href="about.html">
+    ℹ️ About Us
+  </a>
 
-  <a href="result.html">📊 Result</a>
 
-  <a href="admit-card.html">🎫 Admit Card</a>
+  <a href="latest.html">
+    🆕 Latest Update
+  </a>
 
-  <a href="admission.html">📝 Admission</a>
 
-  <a href="answer-key.html">✅ Answer Key</a>
+  <a href="job.html">
+    💼 Latest Jobs
+  </a>
 
-  <a href="bseb.html">📚 BSEB Update</a>
 
-  <a href="model.html">📖 Model Paper</a>
+  <a href="result.html">
+    📊 Result
+  </a>
 
-  <a href="scholarship.html">🎓 Scholarship</a>
 
-  <a href="notice.html">📢 Notice</a>
+  <a href="admit-card.html">
+    🎫 Admit Card
+  </a>
 
-  <a href="important-links.html">🔗 Important Links</a>
 
-  <a href="contact.html">📞 Contact Us</a>
+  <a href="admission.html">
+    📝 Admission
+  </a>
+
+
+  <a href="answer-key.html">
+    ✅ Answer Key
+  </a>
+
+
+  <a href="bseb.html">
+    📚 BSEB Update
+  </a>
+
+
+  <a href="model.html">
+    📖 Model Paper
+  </a>
+
+
+  <a href="scholarship.html">
+    🎓 Scholarship
+  </a>
+
+
+  <a href="notice.html">
+    📢 Notice
+  </a>
+
+
+  <a href="important-links.html">
+    🔗 Important Links
+  </a>
+
+
+  <a href="contact.html">
+    📞 Contact Us
+  </a>
 
 </div>
 
@@ -514,9 +746,13 @@
 <section class="hero">
 
   <h1>
+
     Sujeet Online Centre के<br>
+
     Official Website में आपका<br>
+
     स्वागत है।
+
   </h1>
 
 
@@ -528,16 +764,30 @@
       type="text"
       id="searchInput"
       placeholder="Search..."
-      onkeyup="searchCards()"
+      autocomplete="off"
     >
 
-    <button onclick="searchCards()">
+
+    <button
+      type="button"
+      id="searchButton">
+
       🔍
+
     </button>
 
   </div>
 
 </section>
+
+
+<!-- ================= SEARCH STATUS ================= -->
+
+<div
+  id="searchStatus"
+  class="search-status">
+
+</div>
 
 
 <!-- ================= IMPORTANT CARDS ================= -->
@@ -547,129 +797,207 @@
   id="cardsContainer">
 
 
-  <a href="bseb.html" class="card red">
+  <a
+    href="bseb.html"
+    class="card red">
+
     बिहार बोर्ड की पल-पल की अपडेट
+
   </a>
 
 
-  <a href="result.html" class="card purple">
+  <a
+    href="result.html"
+    class="card purple">
+
     मैट्रिक परीक्षा 2026 का रिजल्ट
+
   </a>
 
 
-  <a href="result.html" class="card green">
+  <a
+    href="result.html"
+    class="card green">
+
     इंटर परीक्षा 2026 का रिजल्ट
+
   </a>
 
 
-  <a href="model.html" class="card red">
-    कक्षा 10वीं का PDF नोट्स
+  <a
+    href="model.html"
+    class="card red">
+
+    कक्षा 10वीं का PDF Notes
+
   </a>
 
 
-  <a href="scholarship.html" class="card pink">
+  <a
+    href="scholarship.html"
+    class="card pink">
+
     कक्षा 1 से 12वीं तक छात्रवृत्ति
+
   </a>
 
 
-  <a href="scholarship.html" class="card purple">
+  <a
+    href="scholarship.html"
+    class="card purple">
+
     मैट्रिक पास प्रोत्साहन राशि 2026
+
   </a>
 
 
-  <a href="scholarship.html" class="card gold">
+  <a
+    href="scholarship.html"
+    class="card gold">
+
     इंटर पास प्रोत्साहन राशि 2026
+
   </a>
 
 
-  <a href="model.html" class="card blue">
-    कक्षा 12वीं का PDF नोट्स
+  <a
+    href="model.html"
+    class="card blue">
+
+    कक्षा 12वीं का PDF Notes
+
   </a>
+
 
 </section>
 
 
-<!-- ================= NO RESULT ================= -->
+<!-- ================= ALL PAGES ================= -->
 
-<div id="noResult">
-  कोई result नहीं मिला।
-</div>
+<section class="all-links">
 
-
-<!-- ================= ALL OTHER PAGES ================= -->
-
-<section class="extra-links">
-
-  <h2 class="extra-title">
+  <h2>
     📌 सभी महत्वपूर्ण सेवाएँ
   </h2>
 
 
-  <div class="extra-grid">
+  <div class="links-grid">
 
 
-    <a href="latest.html" class="extra-link">
+    <a
+      href="latest.html"
+      class="page-link">
+
       🆕 Latest Update
+
     </a>
 
 
-    <a href="job.html" class="extra-link">
+    <a
+      href="job.html"
+      class="page-link">
+
       💼 Latest Jobs
+
     </a>
 
 
-    <a href="result.html" class="extra-link">
+    <a
+      href="result.html"
+      class="page-link">
+
       📊 Result
+
     </a>
 
 
-    <a href="admit-card.html" class="extra-link">
+    <a
+      href="admit-card.html"
+      class="page-link">
+
       🎫 Admit Card
+
     </a>
 
 
-    <a href="admission.html" class="extra-link">
+    <a
+      href="admission.html"
+      class="page-link">
+
       📝 Admission
+
     </a>
 
 
-    <a href="answer-key.html" class="extra-link">
+    <a
+      href="answer-key.html"
+      class="page-link">
+
       ✅ Answer Key
+
     </a>
 
 
-    <a href="bseb.html" class="extra-link">
-      📚 BSEB
+    <a
+      href="bseb.html"
+      class="page-link">
+
+      📚 BSEB Update
+
     </a>
 
 
-    <a href="model.html" class="extra-link">
+    <a
+      href="model.html"
+      class="page-link">
+
       📖 Model Paper
+
     </a>
 
 
-    <a href="scholarship.html" class="extra-link">
+    <a
+      href="scholarship.html"
+      class="page-link">
+
       🎓 Scholarship
+
     </a>
 
 
-    <a href="notice.html" class="extra-link">
+    <a
+      href="notice.html"
+      class="page-link">
+
       📢 Notice
+
     </a>
 
 
-    <a href="important-links.html" class="extra-link">
+    <a
+      href="important-links.html"
+      class="page-link">
+
       🔗 Important Links
+
     </a>
 
 
-    <a href="contact.html" class="extra-link">
-      📞 Contact
+    <a
+      href="contact.html"
+      class="page-link">
+
+      📞 Contact Us
+
     </a>
 
 
-    <a href="about.html" class="extra-link">
+    <a
+      href="about.html"
+      class="page-link">
+
       ℹ️ About Us
+
     </a>
 
   </div>
@@ -681,9 +1009,9 @@
 
 <footer>
 
-  <p>
-    <strong>SUJEET ONLINE CENTRE</strong>
-  </p>
+  <h3>
+    SUJEET ONLINE CENTRE
+  </h3>
 
   <p>
     Learn • Grow • Succeed
@@ -693,7 +1021,7 @@
   <div class="footer-links">
 
     <a href="about.html">
-      About Us
+      About
     </a>
 
     <a href="contact.html">
@@ -731,165 +1059,246 @@
 <script>
 
 
-  /* ================= SEARCH FOCUS ================= */
+/* =================================================
+   SEARCH FUNCTION
+================================================= */
 
-  function focusSearch() {
+function performSearch() {
 
+  const input =
     document
       .getElementById("searchInput")
-      .focus();
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-
-  }
+      .value
+      .toLowerCase()
+      .trim();
 
 
-  /* ================= SEARCH CARDS ================= */
-
-  function searchCards() {
-
-    const input =
-      document
-        .getElementById("searchInput")
-        .value
-        .toLowerCase()
-        .trim();
-
-    const cards =
-      document.querySelectorAll(".card");
-
-    const extraLinks =
-      document.querySelectorAll(".extra-link");
-
-    let found = 0;
+  const cards =
+    document.querySelectorAll(".card");
 
 
-    /* MAIN CARDS */
+  const links =
+    document.querySelectorAll(".page-link");
+
+
+  const status =
+    document.getElementById("searchStatus");
+
+
+  let found = 0;
+
+
+  /* EMPTY SEARCH */
+
+  if (input === "") {
 
     cards.forEach(function(card) {
 
-      const text =
-        card.innerText.toLowerCase();
-
-      if (text.includes(input)) {
-
-        card.style.display = "flex";
-
-        found++;
-
-      } else {
-
-        card.style.display = "none";
-
-      }
+      card.style.display = "flex";
 
     });
 
 
-    /* EXTRA LINKS */
+    links.forEach(function(link) {
 
-    extraLinks.forEach(function(link) {
-
-      const text =
-        link.innerText.toLowerCase();
-
-      if (text.includes(input)) {
-
-        link.style.display = "block";
-
-        found++;
-
-      } else {
-
-        link.style.display = "none";
-
-      }
+      link.style.display = "block";
 
     });
 
 
-    /* EMPTY SEARCH */
+    status.style.display = "none";
 
-    if (input === "") {
+    status.innerHTML = "";
 
-      cards.forEach(function(card) {
-        card.style.display = "flex";
-      });
+    return;
 
-      extraLinks.forEach(function(link) {
-        link.style.display = "block";
-      });
-
-      document
-        .getElementById("noResult")
-        .style.display = "none";
-
-      return;
-
-    }
+  }
 
 
-    /* NO RESULT */
+  /* SEARCH CARDS */
 
-    if (found === 0) {
+  cards.forEach(function(card) {
 
-      document
-        .getElementById("noResult")
-        .style.display = "block";
+    const text =
+      card.textContent
+        .toLowerCase();
+
+
+    if (text.includes(input)) {
+
+      card.style.display = "flex";
+
+      found++;
 
     } else {
 
-      document
-        .getElementById("noResult")
-        .style.display = "none";
+      card.style.display = "none";
 
     }
 
+  });
+
+
+  /* SEARCH PAGE LINKS */
+
+  links.forEach(function(link) {
+
+    const text =
+      link.textContent
+        .toLowerCase();
+
+
+    if (text.includes(input)) {
+
+      link.style.display = "block";
+
+      found++;
+
+    } else {
+
+      link.style.display = "none";
+
+    }
+
+  });
+
+
+  /* RESULT MESSAGE */
+
+  status.style.display = "block";
+
+
+  if (found === 0) {
+
+    status.innerHTML =
+      "❌ कोई result नहीं मिला।";
+
+  } else {
+
+    status.innerHTML =
+      "🔍 " + found + " result मिले।";
+
   }
 
-
-  /* ================= MENU ================= */
-
-  function toggleMenu() {
-
-    const menu =
-      document.getElementById("menuDropdown");
-
-    menu.classList.toggle("active");
-
-  }
+}
 
 
-  /* ================= CLOSE MENU ================= */
+/* =================================================
+   SEARCH BUTTON
+================================================= */
 
-  document.addEventListener(
+document
+  .getElementById("searchButton")
+  .addEventListener(
     "click",
+    performSearch
+  );
+
+
+/* =================================================
+   ENTER KEY SEARCH
+================================================= */
+
+document
+  .getElementById("searchInput")
+  .addEventListener(
+    "keydown",
     function(event) {
 
-      const menu =
-        document.getElementById("menuDropdown");
+      if (event.key === "Enter") {
 
-      const button =
-        document.querySelector(".menu-button");
+        event.preventDefault();
 
-      if (
-        menu.classList.contains("active") &&
-        !menu.contains(event.target) &&
-        !button.contains(event.target)
-      ) {
-
-        menu.classList.remove("active");
+        performSearch();
 
       }
 
     }
   );
 
+
+/* =================================================
+   LIVE SEARCH
+================================================= */
+
+document
+  .getElementById("searchInput")
+  .addEventListener(
+    "input",
+    performSearch
+  );
+
+
+/* =================================================
+   FOCUS SEARCH
+================================================= */
+
+function focusSearch() {
+
+  const search =
+    document.getElementById("searchInput");
+
+
+  search.focus();
+
+
+  window.scrollTo({
+
+    top: 0,
+
+    behavior: "smooth"
+
+  });
+
+}
+
+
+/* =================================================
+   MENU
+================================================= */
+
+function toggleMenu() {
+
+  const menu =
+    document.getElementById("menuDropdown");
+
+
+  menu.classList.toggle("active");
+
+}
+
+
+/* =================================================
+   CLOSE MENU OUTSIDE CLICK
+================================================= */
+
+document.addEventListener(
+  "click",
+  function(event) {
+
+    const menu =
+      document.getElementById("menuDropdown");
+
+
+    const button =
+      document.querySelector(".menu-button");
+
+
+    if (
+      menu.classList.contains("active") &&
+      !menu.contains(event.target) &&
+      !button.contains(event.target)
+    ) {
+
+      menu.classList.remove("active");
+
+    }
+
+  }
+);
+
 </script>
 
 
 </body>
-</html>
+  </html>
