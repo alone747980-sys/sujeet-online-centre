@@ -6,625 +6,1162 @@
 
   <title>Sujeet Online Centre - Official Website</title>
 
-  <meta name="description"
-        content="Sujeet Online Centre - Latest Jobs, Results, Admit Card, Admission, Scholarship, Bihar Board और महत्वपूर्ण जानकारी">
-
-  <meta name="keywords"
-        content="Sujeet Online Centre, Bihar Job, Result, Admit Card, Admission, Scholarship, BSEB, Latest News">
+  <meta name="description" content="Sujeet Online Centre - Bihar Board Update, Result, Admit Card, Scholarship, Admission और Latest Updates">
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
-      background: #f4f7fb;
+      background: #f5f5f5;
       color: #222;
     }
 
-    /* HEADER */
+    a {
+      text-decoration: none;
+    }
+
+    /* ================= HEADER ================= */
+
     header {
-      background: linear-gradient(135deg, #0d47a1, #1976d2);
-      color: white;
-      padding: 22px 15px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .header-top {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 18px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .brand-name {
+      font-size: 21px;
+      font-weight: 800;
+      color: #111;
+    }
+
+    .brand-name span {
+      color: #1264d8;
+    }
+
+    .header-search {
+      font-size: 25px;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    /* ================= NAVIGATION ================= */
+
+    nav {
+      background: #fff;
+      border-top: 1px solid #eee;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      min-height: 45px;
+    }
+
+    .nav-inner a {
+      color: #222;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .nav-inner a:hover {
+      color: #1559d6;
+    }
+
+    /* ================= MOBILE MENU ================= */
+
+    .mobile-menu {
+      display: none;
+      background: white;
+      border-top: 1px solid #ddd;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 14px 20px;
+      color: #222;
+      border-bottom: 1px solid #eee;
+      font-weight: 600;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      background: linear-gradient(
+        135deg,
+        #ed1429,
+        #a51999,
+        #172de4
+      );
+
+      padding: 52px 15px 55px;
       text-align: center;
     }
 
-    header h1 {
-      font-size: 30px;
-      margin-bottom: 7px;
+    .hero h1 {
+      color: white;
+      font-size: 34px;
+      line-height: 1.35;
+      max-width: 900px;
+      margin: auto;
+      margin-bottom: 32px;
     }
 
-    header p {
+    /* SEARCH */
+
+    .main-search {
+      width: 100%;
+      max-width: 650px;
+      height: 55px;
+      margin: auto;
+      display: flex;
+    }
+
+    .main-search input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 0 20px;
+      font-size: 17px;
+    }
+
+    .main-search button {
+      width: 65px;
+      border: none;
+      background: #30343a;
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* ================= IMPORTANT CARDS ================= */
+
+    .important-box {
+      width: calc(100% - 30px);
+      max-width: 1100px;
+      margin: -12px auto 22px;
+      background: white;
+      padding: 18px;
+      border-radius: 8px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 5;
+    }
+
+    .important-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .important-card {
+      min-height: 70px;
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .important-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .red {
+      background: linear-gradient(135deg,#f01436,#bc0030);
+    }
+
+    .purple {
+      background: linear-gradient(135deg,#9115a8,#4d087c);
+    }
+
+    .green {
+      background: linear-gradient(135deg,#159e57,#08783b);
+    }
+
+    .pink {
+      background: linear-gradient(135deg,#ed13ba,#9b0bbb);
+    }
+
+    .blue {
+      background: linear-gradient(135deg,#2844e4,#0b24a9);
+    }
+
+    .gold {
+      background: linear-gradient(135deg,#a28a12,#665400);
+    }
+
+    /* ================= SOCIAL BUTTONS ================= */
+
+    .social-box {
+      width: calc(100% - 30px);
+      max-width: 1100px;
+      margin: 0 auto 30px;
+    }
+
+    .social-btn {
+      width: 100%;
+      height: 43px;
+      background: white;
+      border: 1px solid #aaa;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      color: #222;
       font-size: 15px;
     }
 
-    /* NAVIGATION */
-    nav {
-      background: #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 5px;
-      padding: 10px;
-    }
-
-    nav ul li a {
-      display: block;
-      text-decoration: none;
-      color: #0d47a1;
+    .join {
+      color: white;
+      padding: 7px 17px;
+      border-radius: 4px;
+      font-size: 13px;
       font-weight: bold;
-      padding: 9px 13px;
-      border-radius: 5px;
     }
 
-    nav ul li a:hover {
-      background: #e3f2fd;
+    .whatsapp {
+      background: #28a745;
     }
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #e3f2fd, #ffffff);
-      text-align: center;
-      padding: 45px 15px;
+    .telegram {
+      background: #159bd7;
     }
 
-    .hero h2 {
-      color: #0d47a1;
-      font-size: 28px;
-      margin-bottom: 12px;
-    }
+    /* ================= CONTENT ================= */
 
-    .hero p {
-      color: #555;
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.6;
-    }
-
-    /* CONTAINER */
-    .container {
+    .content {
+      width: calc(100% - 30px);
       max-width: 1100px;
       margin: auto;
-      padding: 30px 15px;
+    }
+
+    .sections-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    /* ================= SECTION BOX ================= */
+
+    .section-box {
+      background: white;
+      border: 2px solid #371099;
+      margin-bottom: 25px;
     }
 
     .section-title {
-      text-align: center;
-      color: #0d47a1;
-      margin-bottom: 25px;
-      font-size: 25px;
-    }
-
-    /* CARDS */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 22px 15px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 22px rgba(0,0,0,0.13);
-    }
-
-    .icon {
-      font-size: 38px;
-      margin-bottom: 12px;
-    }
-
-    .card h3 {
-      color: #0d47a1;
-      margin-bottom: 8px;
-      font-size: 19px;
-    }
-
-    .card p {
-      color: #666;
-      font-size: 14px;
-      line-height: 1.5;
-      margin-bottom: 15px;
-    }
-
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      background: #1976d2;
+      background: #35109b;
       color: white;
-      padding: 9px 17px;
-      border-radius: 6px;
-      font-size: 14px;
+      text-align: center;
+      padding: 8px 5px;
+      font-size: 17px;
       font-weight: bold;
     }
 
-    .btn:hover {
-      background: #0d47a1;
+    .posts {
+      padding: 8px;
     }
 
-    /* NOTICE */
-    .notice {
-      background: white;
-      padding: 20px;
-      margin-top: 30px;
-      border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-    }
-
-    .notice h2 {
-      color: #0d47a1;
-      margin-bottom: 12px;
-    }
-
-    .notice a {
+    .post {
       display: block;
-      text-decoration: none;
       color: #333;
-      padding: 9px 0;
-      border-bottom: 1px solid #eee;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      padding: 9px 10px;
+      margin-bottom: 6px;
+      font-size: 13px;
+      line-height: 1.35;
+      transition: 0.2s;
     }
 
-    .notice a:hover {
-      color: #1976d2;
+    .post:hover {
+      background: #f1edff;
+      border-color: #6540c9;
     }
 
-    /* FOOTER */
-    footer {
-      background: #0d47a1;
+    .read-more {
+      display: block;
+      background: #3500a2;
       color: white;
-      margin-top: 35px;
-      padding: 30px 15px;
       text-align: center;
+      border-radius: 20px;
+      padding: 9px;
+      margin: 10px 0 4px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* ================= NO RESULT ================= */
+
+    #noResult {
+      display: none;
+      background: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: 7px;
+      margin-bottom: 30px;
+      color: #d00;
+      font-weight: bold;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+      margin-top: 20px;
     }
 
     footer h3 {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     footer p {
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .footer-links {
-      margin: 15px 0;
-    }
-
-    .footer-links a {
-      color: white;
-      text-decoration: none;
-      margin: 5px 8px;
-      display: inline-block;
+      margin: 5px;
       font-size: 14px;
     }
 
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
+    /* ================= MOBILE ================= */
 
-    /* MOBILE */
-    @media (max-width: 600px) {
+    @media(max-width: 800px) {
 
-      header h1 {
-        font-size: 24px;
+      .header-top {
+        padding: 6px 12px;
       }
 
-      header p {
-        font-size: 13px;
+      .logo {
+        width: 50px;
+        height: 50px;
       }
 
-      nav ul {
-        gap: 2px;
+      .brand-name {
+        font-size: 16px;
       }
 
-      nav ul li a {
-        padding: 7px 9px;
-        font-size: 13px;
+      .header-search {
+        font-size: 21px;
+        margin-right: 8px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .mobile-menu.active {
+        display: block;
       }
 
       .hero {
-        padding: 35px 15px;
+        padding: 45px 12px 45px;
       }
 
-      .hero h2 {
+      .hero h1 {
+        font-size: 26px;
+        margin-bottom: 28px;
+      }
+
+      .important-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .sections-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+    }
+
+    @media(max-width: 450px) {
+
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .hero h1 {
         font-size: 23px;
       }
 
+      .main-search {
+        height: 52px;
+      }
+
+      .main-search input {
+        font-size: 15px;
+      }
+
+      .important-box {
+        width: calc(100% - 20px);
+        padding: 12px;
+      }
+
+      .important-grid {
+        gap: 9px;
+      }
+
+      .important-card {
+        min-height: 75px;
+        font-size: 12px;
+      }
+
+      .content {
+        width: calc(100% - 20px);
+      }
+
+      .social-box {
+        width: calc(100% - 20px);
+      }
+
       .section-title {
-        font-size: 22px;
+        font-size: 15px;
+      }
+
+      .post {
+        font-size: 12px;
       }
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- HEADER -->
+
+  <!-- ================= HEADER ================= -->
+
   <header>
-    <h1>🌐 Sujeet Online Centre</h1>
-    <p>Online Services • Jobs • Results • Admit Card • Education</p>
-  </header>
 
+    <div class="header-top">
 
-  <!-- NAVIGATION -->
-  <nav>
-    <ul>
+      <a href="#" class="brand">
 
-      <li>
-        <a href="index.html">🏠 Home</a>
-      </li>
+        <img
+          src="logo.png"
+          class="logo"
+          alt="Sujeet Online Centre"
+        >
 
-      <li>
-        <a href="latest.html">🆕 Latest</a>
-      </li>
+        <div class="brand-name">
+          SUJEET <span>ONLINE CENTRE</span>
+        </div>
 
-      <li>
-        <a href="job.html">💼 Jobs</a>
-      </li>
+      </a>
 
-      <li>
-        <a href="result.html">📊 Result</a>
-      </li>
 
-      <li>
-        <a href="admit-card.html">🎫 Admit Card</a>
-      </li>
+      <div>
 
-      <li>
-        <a href="admission.html">📝 Admission</a>
-      </li>
+        <span
+          class="header-search"
+          onclick="focusSearch()"
+        >
+          🔍
+        </span>
 
-      <li>
-        <a href="notice.html">📢 Notice</a>
-      </li>
-
-    </ul>
-  </nav>
-
-
-  <!-- HERO SECTION -->
-  <section class="hero">
-
-    <h2>Welcome to Sujeet Online Centre</h2>
-
-    <p>
-      सरकारी नौकरी, रिजल्ट, एडमिट कार्ड, एडमिशन,
-      स्कॉलरशिप, बिहार बोर्ड और अन्य महत्वपूर्ण
-      ऑनलाइन जानकारी एक ही जगह प्राप्त करें।
-    </p>
-
-  </section>
-
-
-  <!-- MAIN SERVICES -->
-  <main class="container">
-
-    <h2 class="section-title">
-      📌 Important Services
-    </h2>
-
-    <div class="grid">
-
-
-      <!-- JOB -->
-      <div class="card">
-
-        <div class="icon">💼</div>
-
-        <h3>Latest Jobs</h3>
-
-        <p>
-          सरकारी एवं अन्य महत्वपूर्ण नौकरी की जानकारी।
-        </p>
-
-        <a href="job.html" class="btn">
-          View Jobs
-        </a>
-
-      </div>
-
-
-      <!-- RESULT -->
-      <div class="card">
-
-        <div class="icon">📊</div>
-
-        <h3>Results</h3>
-
-        <p>
-          विभिन्न परीक्षाओं के रिजल्ट और Result Links।
-        </p>
-
-        <a href="result.html" class="btn">
-          Check Result
-        </a>
-
-      </div>
-
-
-      <!-- ADMIT CARD -->
-      <div class="card">
-
-        <div class="icon">🎫</div>
-
-        <h3>Admit Card</h3>
-
-        <p>
-          विभिन्न परीक्षाओं के Admit Card डाउनलोड करें।
-        </p>
-
-        <a href="admit-card.html" class="btn">
-          View Admit Card
-        </a>
-
-      </div>
-
-
-      <!-- ADMISSION -->
-      <div class="card">
-
-        <div class="icon">📝</div>
-
-        <h3>Admission</h3>
-
-        <p>
-          कॉलेज, यूनिवर्सिटी एवं अन्य Admission की जानकारी।
-        </p>
-
-        <a href="admission.html" class="btn">
-          View Admission
-        </a>
-
-      </div>
-
-
-      <!-- BSEB -->
-      <div class="card">
-
-        <div class="icon">📚</div>
-
-        <h3>Bihar Board</h3>
-
-        <p>
-          BSEB से संबंधित Result, Exam और महत्वपूर्ण जानकारी।
-        </p>
-
-        <a href="bseb.html" class="btn">
-          Open BSEB
-        </a>
-
-      </div>
-
-
-      <!-- MODEL PAPER -->
-      <div class="card">
-
-        <div class="icon">📖</div>
-
-        <h3>Model Paper</h3>
-
-        <p>
-          परीक्षा की तैयारी के लिए Model Paper और Practice Set।
-        </p>
-
-        <a href="model.html" class="btn">
-          View Model Paper
-        </a>
-
-      </div>
-
-
-      <!-- ANSWER KEY -->
-      <div class="card">
-
-        <div class="icon">✅</div>
-
-        <h3>Answer Key</h3>
-
-        <p>
-          विभिन्न परीक्षाओं की Answer Key देखें।
-        </p>
-
-        <a href="answer-key.html" class="btn">
-          View Answer Key
-        </a>
-
-      </div>
-
-
-      <!-- SCHOLARSHIP -->
-      <div class="card">
-
-        <div class="icon">🎓</div>
-
-        <h3>Scholarship</h3>
-
-        <p>
-          विभिन्न Scholarship योजनाओं की जानकारी।
-        </p>
-
-        <a href="scholarship.html" class="btn">
-          View Scholarship
-        </a>
-
-      </div>
-
-
-      <!-- IMPORTANT LINKS -->
-      <div class="card">
-
-        <div class="icon">🔗</div>
-
-        <h3>Important Links</h3>
-
-        <p>
-          सभी महत्वपूर्ण सरकारी एवं उपयोगी Links।
-        </p>
-
-        <a href="important-links.html" class="btn">
-          View Links
-        </a>
-
-      </div>
-
-
-      <!-- LATEST -->
-      <div class="card">
-
-        <div class="icon">🆕</div>
-
-        <h3>Latest Updates</h3>
-
-        <p>
-          वेबसाइट पर उपलब्ध नवीनतम Updates देखें।
-        </p>
-
-        <a href="latest.html" class="btn">
-          Latest Updates
-        </a>
-
-      </div>
-
-
-      <!-- NOTICE -->
-      <div class="card">
-
-        <div class="icon">📢</div>
-
-        <h3>Notice</h3>
-
-        <p>
-          महत्वपूर्ण Notice और जरूरी सूचनाएं।
-        </p>
-
-        <a href="notice.html" class="btn">
-          View Notice
-        </a>
-
-      </div>
-
-
-      <!-- ABOUT -->
-      <div class="card">
-
-        <div class="icon">ℹ️</div>
-
-        <h3>About Us</h3>
-
-        <p>
-          Sujeet Online Centre के बारे में जानकारी।
-        </p>
-
-        <a href="about.html" class="btn">
-          About Us
-        </a>
-
-      </div>
-
-
-      <!-- CONTACT -->
-      <div class="card">
-
-        <div class="icon">📞</div>
-
-        <h3>Contact Us</h3>
-
-        <p>
-          किसी भी जानकारी या सहायता के लिए संपर्क करें।
-        </p>
-
-        <a href="contact.html" class="btn">
-          Contact Us
-        </a>
+        <span
+          class="menu-btn"
+          onclick="toggleMenu()"
+        >
+          ☰
+        </span>
 
       </div>
 
     </div>
 
 
-    <!-- NOTICE SECTION -->
-    <div class="notice">
+    <!-- DESKTOP NAVIGATION -->
 
-      <h2>📢 Important Information</h2>
+    <nav>
 
-      <a href="latest.html">
-        🆕 Latest Updates देखें
+      <div class="nav-inner">
+
+        <a href="#">Home</a>
+
+        <a href="#bseb">BSEB Update</a>
+
+        <a href="#latest">Latest Update</a>
+
+        <a href="#admit">Admit Card</a>
+
+        <a href="#result">Result</a>
+
+        <a href="#scholarship">Scholarship</a>
+
+        <a href="#model">Model Paper</a>
+
+      </div>
+
+    </nav>
+
+
+    <!-- MOBILE NAVIGATION -->
+
+    <div
+      class="mobile-menu"
+      id="mobileMenu"
+    >
+
+      <a href="#">Home</a>
+
+      <a href="#bseb">BSEB Update</a>
+
+      <a href="#latest">Latest Update</a>
+
+      <a href="#admit">Admit Card</a>
+
+      <a href="#result">Result</a>
+
+      <a href="#scholarship">Scholarship</a>
+
+      <a href="#model">Model Paper</a>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <h1>
+      Sujeet Online Centre के
+      Official Website में आपका स्वागत है।
+    </h1>
+
+
+    <div class="main-search">
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search..."
+        onkeyup="searchWebsite()"
+      >
+
+      <button onclick="searchWebsite()">
+        🔍
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= IMPORTANT UPDATES ================= -->
+
+  <div class="important-box">
+
+    <div class="important-grid">
+
+      <a href="#" class="important-card red">
+        बिहार बोर्ड की पल-पल की अपडेट यहाँ देखें
       </a>
 
-      <a href="notice.html">
-        📢 Important Notice देखें
+      <a href="#" class="important-card purple">
+        मैट्रिक परीक्षा 2026 का रिजल्ट यहाँ देखें
       </a>
 
-      <a href="job.html">
-        💼 Latest Jobs देखें
+      <a href="#" class="important-card green">
+        इंटर परीक्षा 2026 का रिजल्ट यहाँ देखें
       </a>
 
-      <a href="result.html">
-        📊 Latest Results देखें
+      <a href="#" class="important-card red">
+        कक्षा 10वीं का PDF नोट्स यहाँ डाउनलोड करें
       </a>
 
-      <a href="admit-card.html">
-        🎫 Latest Admit Cards देखें
+      <a href="#" class="important-card pink">
+        कक्षा 1 से 12वीं तक छात्रवृत्ति
       </a>
 
-      <a href="scholarship.html">
-        🎓 Scholarship Updates देखें
+      <a href="#" class="important-card purple">
+        मैट्रिक पास प्रोत्साहन राशि
       </a>
+
+      <a href="#" class="important-card gold">
+        इंटर पास प्रोत्साहन राशि
+      </a>
+
+      <a href="#" class="important-card blue">
+        कक्षा 12वीं का PDF नोट्स
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= SOCIAL ================= -->
+
+  <div class="social-box">
+
+    <div class="social-btn">
+
+      <span>
+        🟢 Join WhatsApp
+      </span>
+
+      <a href="#" class="join whatsapp">
+        Join Now
+      </a>
+
+    </div>
+
+
+    <div class="social-btn">
+
+      <span>
+        🔵 Join Telegram
+      </span>
+
+      <a href="#" class="join telegram">
+        Join Now
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= CONTENT ================= -->
+
+  <main class="content">
+
+    <div id="noResult">
+      कोई result नहीं मिला।
+    </div>
+
+
+    <div class="sections-grid">
+
+
+      <!-- ================= BSEB UPDATE ================= -->
+
+      <section
+        class="section-box"
+        id="bseb"
+      >
+
+        <div class="section-title">
+          BSEB Update
+        </div>
+
+        <div class="posts">
+
+          <a href="#" class="post">
+            बिहार बोर्ड मैट्रिक परीक्षा 2026 की महत्वपूर्ण अपडेट यहाँ देखें
+          </a>
+
+          <a href="#" class="post">
+            बिहार बोर्ड इंटर परीक्षा 2026 की नई जानकारी यहाँ देखें
+          </a>
+
+          <a href="#" class="post">
+            बिहार बोर्ड मैट्रिक एवं इंटर परीक्षा की तैयारी से जुड़ी जानकारी
+          </a>
+
+          <a href="#" class="post">
+            बिहार बोर्ड परीक्षा 2026 से संबंधित जरूरी सूचना
+          </a>
+
+          <a href="#" class="post">
+            मैट्रिक परीक्षा के विद्यार्थियों के लिए महत्वपूर्ण अपडेट
+          </a>
+
+          <a href="#" class="post">
+            इंटर परीक्षा के विद्यार्थियों के लिए महत्वपूर्ण अपडेट
+          </a>
+
+          <a href="#" class="post">
+            बिहार बोर्ड की नई अधिसूचना और जरूरी जानकारी
+          </a>
+
+          <a href="#" class="post">
+            मैट्रिक एवं इंटर परीक्षा फॉर्म से जुड़ी जानकारी
+          </a>
+
+          <a href="#" class="post">
+            बिहार बोर्ड परीक्षा की तैयारी के लिए महत्वपूर्ण जानकारी
+          </a>
+
+          <a href="#" class="post">
+            बिहार बोर्ड से संबंधित Latest Update
+          </a>
+
+          <a href="#" class="read-more">
+            Read More →
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= ADMIT CARD ================= -->
+
+      <section
+        class="section-box"
+        id="admit"
+      >
+
+        <div class="section-title">
+          Admit Card
+        </div>
+
+        <div class="posts">
+
+          <a href="#" class="post">
+            बिहार बोर्ड परीक्षा का Admit Card जारी - यहाँ से डाउनलोड करें
+          </a>
+
+          <a href="#" class="post">
+            मैट्रिक परीक्षा का Admit Card डाउनलोड करें
+          </a>
+
+          <a href="#" class="post">
+            इंटर परीक्षा का Admit Card यहाँ से प्राप्त करें
+          </a>
+
+          <a href="#" class="post">
+            STET परीक्षा का Admit Card जारी
+          </a>
+
+          <a href="#" class="post">
+            बिहार बोर्ड Dummy Registration Card डाउनलोड करें
+          </a>
+
+          <a href="#" class="post">
+            मैट्रिक Dummy Registration Card यहाँ देखें
+          </a>
+
+          <a href="#" class="post">
+            इंटर Dummy Registration Card यहाँ देखें
+          </a>
+
+          <a href="#" class="post">
+            परीक्षा से संबंधित महत्वपूर्ण Admit Card Update
+          </a>
+
+          <a href="#" class="post">
+            प्रवेश परीक्षा का Admit Card यहाँ देखें
+          </a>
+
+          <a href="#" class="post">
+            Latest Admit Card Update
+          </a>
+
+          <a href="#" class="read-more">
+            Read More →
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= RESULT ================= -->
+
+      <section
+        class="section-box"
+        id="result"
+      >
+
+        <div class="section-title">
+          Result
+        </div>
+
+        <div class="posts">
+
+          <a href="#" class="post">
+            स्नातक परीक्षा का Result जारी - यहाँ देखें
+          </a>
+
+          <a href="#" class="post">
+            University Semester Result यहाँ देखें
+          </a>
+
+          <a href="#" class="post">
+            बिहार बोर्ड मैट्रिक Result जारी
+          </a>
+
+          <a href="#" class="post">
+            बिहार बोर्ड इंटर Result जारी
+          </a>
+
+          <a href="#" class="post">
+            मैट्रिक कम्पार्टमेंट Result यहाँ देखें
+          </a>
+
+          <a href="#" class="post">
+            इंटर कम्पार्टमेंट Result यहाँ देखें
+          </a>
+
+          <a href="#" class="post">
+            स्कॉलरशिप Result और Status यहाँ देखें
+          </a>
+
+          <a href="#" class="post">
+            परीक्षा Result से संबंधित Latest Update
+          </a>
+
+          <a href="#" class="read-more">
+            Read More →
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= ADMISSION ================= -->
+
+      <section
+        class="section-box"
+        id="latest"
+      >
+
+        <div class="section-title">
+          Admission
+        </div>
+
+        <div class="posts">
+
+          <a href="#" class="post">
+            STET के लिए आवेदन शुरू - जल्दी करें आवेदन
+          </a>
+
+          <a href="#" class="post">
+            विश्वविद्यालय नामांकन के लिए आवेदन शुरू
+          </a>
+
+          <a href="#" class="post">
+            Merit List जारी - यहाँ देखें
+          </a>
+
+          <a href="#" class="post">
+            कक्षा 11वीं में नामांकन के लिए आवेदन
+          </a>
+
+          <a href="#" class="post">
+            विश्वविद्यालय नामांकन 2026 से संबंधित जानकारी
+          </a>
+
+          <a href="#" class="post">
+            स्कूल एवं कॉलेज Admission Update
+          </a>
+
+          <a href="#" class="post">
+            ऑनलाइन Admission Form कैसे भरें
+          </a>
+
+          <a href="#" class="post">
+            Admission से संबंधित Latest Update
+          </a>
+
+          <a href="#" class="read-more">
+            Read More →
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= SCHOLARSHIP ================= -->
+
+      <section
+        class="section-box"
+        id="scholarship"
+      >
+
+        <div class="section-title">
+          Scholarship
+        </div>
+
+        <div class="posts">
+
+          <a href="#" class="post">
+            छात्रवृत्ति आवेदन शुरू - यहाँ से आवेदन करें
+          </a>
+
+          <a href="#" class="post">
+            मैट्रिक पास प्रोत्साहन राशि की जानकारी
+          </a>
+
+          <a href="#" class="post">
+            इंटर पास प्रोत्साहन राशि की जानकारी
+          </a>
+
+          <a href="#" class="post">
+            छात्रवृत्ति आवेदन की अंतिम तिथि
+          </a>
+
+          <a href="#" class="post">
+            Scholarship Status यहाँ चेक करें
+          </a>
+
+          <a href="#" class="post">
+            Scholarship Payment की जानकारी
+          </a>
+
+          <a href="#" class="post">
+            छात्रवृत्ति से संबंधित Latest Update
+          </a>
+
+          <a href="#" class="read-more">
+            Read More →
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= MODEL PAPER ================= -->
+
+      <section
+        class="section-box"
+        id="model"
+      >
+
+        <div class="section-title">
+          Model Paper & Notes
+        </div>
+
+        <div class="posts">
+
+          <a href="#" class="post">
+            कक्षा 10वीं का Model Paper डाउनलोड करें
+          </a>
+
+          <a href="#" class="post">
+            कक्षा 12वीं का Model Paper डाउनलोड करें
+          </a>
+
+          <a href="#" class="post">
+            मैट्रिक PDF Notes यहाँ डाउनलोड करें
+          </a>
+
+          <a href="#" class="post">
+            इंटर PDF Notes यहाँ डाउनलोड करें
+          </a>
+
+          <a href="#" class="post">
+            महत्वपूर्ण प्रश्न एवं उत्तर
+          </a>
+
+          <a href="#" class="post">
+            परीक्षा की तैयारी के लिए Study Material
+          </a>
+
+          <a href="#" class="post">
+            Latest Model Paper और Notes
+          </a>
+
+          <a href="#" class="read-more">
+            Read More →
+          </a>
+
+        </div>
+
+      </section>
+
 
     </div>
 
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- ================= FOOTER ================= -->
+
   <footer>
 
-    <h3>🌐 Sujeet Online Centre</h3>
+    <h3>
+      SUJEET ONLINE CENTRE
+    </h3>
 
     <p>
-      आपका भरोसेमंद Online Education & Information Centre
+      Learn • Grow • Succeed
     </p>
-
-    <div class="footer-links">
-
-      <a href="about.html">About</a>
-
-      <a href="contact.html">Contact</a>
-
-      <a href="important-links.html">Important Links</a>
-
-      <a href="privacy-policy.html">Privacy Policy</a>
-
-      <a href="terms.html">Terms & Conditions</a>
-
-      <a href="disclaimer.html">Disclaimer</a>
-
-    </div>
 
     <p>
       © 2026 Sujeet Online Centre. All Rights Reserved.
     </p>
 
   </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    /* MOBILE MENU */
+
+    function toggleMenu() {
+
+      const menu =
+        document.getElementById("mobileMenu");
+
+      menu.classList.toggle("active");
+
+    }
+
+
+    /* SEARCH FOCUS */
+
+    function focusSearch() {
+
+      document
+        .getElementById("searchInput")
+        .focus();
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    }
+
+
+    /* WEBSITE SEARCH */
+
+    function searchWebsite() {
+
+      const input =
+        document
+          .getElementById("searchInput")
+          .value
+          .toLowerCase()
+          .trim();
+
+      const posts =
+        document.querySelectorAll(".post");
+
+      const importantCards =
+        document.querySelectorAll(".important-card");
+
+      let found = false;
+
+
+      /* SEARCH POSTS */
+
+      posts.forEach(function(post) {
+
+        if (post.classList.contains("read-more")) {
+          return;
+        }
+
+        const text =
+          post.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+
+          post.style.display = "block";
+          found = true;
+
+        } else {
+
+          post.style.display = "none";
+
+        }
+
+      });
+
+
+      /* SEARCH IMPORTANT CARDS */
+
+      importantCards.forEach(function(card) {
+
+        const text =
+          card.innerText.toLowerCase();
+
+        if (input === "" || text.includes(input)) {
+
+          card.style.display = "flex";
+          found = true;
+
+        } else {
+
+          card.style.display = "none";
+
+        }
+
+      });
+
+
+      /* NO RESULT */
+
+      const noResult =
+        document.getElementById("noResult");
+
+      if (input !== "" && !found) {
+
+        noResult.style.display = "block";
+
+      } else {
+
+        noResult.style.display = "none";
+
+      }
+
+    }
+
+  </script>
+
 
 </body>
 </html>
