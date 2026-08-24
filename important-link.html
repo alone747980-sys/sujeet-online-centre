@@ -1,1 +1,624 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Important Links - Sujeet Online Centre</title>
+
+  <meta name="description"
+    content="Sujeet Online Centre - Important Links, Official Websites, Online Services और सरकारी पोर्टल।">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #222;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .header-top {
+      max-width: 1200px;
+      min-height: 70px;
+      margin: auto;
+      padding: 7px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .brand-name span {
+      color: #185dd8;
+    }
+
+    .home-btn {
+      background: #35109b;
+      color: white;
+      padding: 9px 15px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    nav {
+      background: white;
+      border-top: 1px solid #eee;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      min-height: 45px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      padding: 5px;
+    }
+
+    .nav-inner a {
+      color: #222;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav-inner a:hover {
+      color: #1559d6;
+    }
+
+    .hero {
+      background: linear-gradient(135deg,#ed1429,#a51999,#172de4);
+      color: white;
+      text-align: center;
+      padding: 42px 15px;
+    }
+
+    .hero h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 15px;
+    }
+
+    .container {
+      width: calc(100% - 30px);
+      max-width: 1000px;
+      margin: 30px auto;
+    }
+
+    .page-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .page-title h2 {
+      color: #35109b;
+      font-size: 25px;
+    }
+
+    .page-title p {
+      color: #666;
+      margin-top: 6px;
+    }
+
+    .search-box {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .link-card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 16px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      border-left: 5px solid #35109b;
+    }
+
+    .link-card h3 {
+      color: #35109b;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .link-card p {
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 13px;
+      font-size: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #35109b;
+      color: white;
+      padding: 10px 17px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #24056f;
+    }
+
+    .notice {
+      background: #fff8e1;
+      border-left: 5px solid #ffb300;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 25px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 28px 10px;
+      margin-top: 35px;
+    }
+
+    footer h3 {
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      max-width: 900px;
+      margin: 18px auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+    }
+
+    .footer-links a {
+      color: #ddd;
+      font-size: 13px;
+    }
+
+    @media(max-width:600px) {
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .logo {
+        width: 48px;
+        height: 48px;
+      }
+
+      .home-btn {
+        font-size: 12px;
+        padding: 8px 11px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 35px 12px;
+      }
+
+      .hero h1 {
+        font-size: 25px;
+      }
+
+      .container {
+        width: calc(100% - 20px);
+      }
+
+      .page-title h2 {
+        font-size: 21px;
+      }
+
+      .link-card {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="header-top">
+
+      <a href="index.html" class="brand">
+
+        <img
+          src="logo.png"
+          class="logo"
+          alt="Sujeet Online Centre"
+        >
+
+        <div class="brand-name">
+          SUJEET <span>ONLINE CENTRE</span>
+        </div>
+
+      </a>
+
+      <a href="index.html" class="home-btn">
+        ← Home
+      </a>
+
+    </div>
+
+    <nav>
+
+      <div class="nav-inner">
+
+        <a href="index.html">Home</a>
+        <a href="job.html">Latest Jobs</a>
+        <a href="latest.html">Latest Update</a>
+        <a href="admit-card.html">Admit Card</a>
+        <a href="result.html">Result</a>
+        <a href="answer-key.html">Answer Key</a>
+        <a href="admission.html">Admission</a>
+        <a href="scholarship.html">Scholarship</a>
+        <a href="notice.html">Notice</a>
+        <a href="important-links.html">Important Links</a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h1>🔗 Important Links</h1>
+
+    <p>
+      जरूरी Official Websites और Online Services
+    </p>
+
+  </section>
+
+
+  <!-- CONTENT -->
+
+  <main class="container">
+
+    <div class="page-title">
+
+      <h2>Important Links</h2>
+
+      <p>
+        विद्यार्थियों और नागरिकों के लिए उपयोगी महत्वपूर्ण वेबसाइट
+      </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Important Link खोजें..."
+        onkeyup="searchLinks()"
+      >
+
+    </div>
+
+
+    <!-- LINK 1 -->
+
+    <div class="link-card">
+
+      <h3>🏫 Bihar Board Official Website</h3>
+
+      <p>
+        बिहार विद्यालय परीक्षा समिति की Official Website।
+      </p>
+
+      <a
+        href="https://secondary.biharboardonline.com/"
+        target="_blank"
+        class="btn"
+      >
+        Visit Website →
+      </a>
+
+    </div>
+
+
+    <!-- LINK 2 -->
+
+    <div class="link-card">
+
+      <h3>🎓 Bihar Government Official Website</h3>
+
+      <p>
+        बिहार सरकार की आधिकारिक वेबसाइट।
+      </p>
+
+      <a
+        href="https://state.bihar.gov.in/"
+        target="_blank"
+        class="btn"
+      >
+        Visit Website →
+      </a>
+
+    </div>
+
+
+    <!-- LINK 3 -->
+
+    <div class="link-card">
+
+      <h3>💼 National Career Service</h3>
+
+      <p>
+        सरकारी और निजी नौकरी से संबंधित जानकारी के लिए।
+      </p>
+
+      <a
+        href="https://www.ncs.gov.in/"
+        target="_blank"
+        class="btn"
+      >
+        Visit Website →
+      </a>
+
+    </div>
+
+
+    <!-- LINK 4 -->
+
+    <div class="link-card">
+
+      <h3>🪪 DigiLocker</h3>
+
+      <p>
+        Marksheet, Certificate और अन्य Digital Documents के लिए।
+      </p>
+
+      <a
+        href="https://www.digilocker.gov.in/"
+        target="_blank"
+        class="btn"
+      >
+        Visit Website →
+      </a>
+
+    </div>
+
+
+    <!-- LINK 5 -->
+
+    <div class="link-card">
+
+      <h3>🇮🇳 National Scholarship Portal</h3>
+
+      <p>
+        Scholarship आवेदन और Scholarship Status के लिए।
+      </p>
+
+      <a
+        href="https://scholarships.gov.in/"
+        target="_blank"
+        class="btn"
+      >
+        Visit Website →
+      </a>
+
+    </div>
+
+
+    <!-- LINK 6 -->
+
+    <div class="link-card">
+
+      <h3>📝 Staff Selection Commission</h3>
+
+      <p>
+        SSC की Official Website — भर्ती, परीक्षा और Result की जानकारी।
+      </p>
+
+      <a
+        href="https://ssc.gov.in/"
+        target="_blank"
+        class="btn"
+      >
+        Visit Website →
+      </a>
+
+    </div>
+
+
+    <!-- LINK 7 -->
+
+    <div class="link-card">
+
+      <h3>🚆 Railway Recruitment Board</h3>
+
+      <p>
+        रेलवे भर्ती से संबंधित Official जानकारी।
+      </p>
+
+      <a
+        href="https://www.rrbapply.gov.in/"
+        target="_blank"
+        class="btn"
+      >
+        Visit Website →
+      </a>
+
+    </div>
+
+
+    <!-- LINK 8 -->
+
+    <div class="link-card">
+
+      <h3>🏛️ UPSC Official Website</h3>
+
+      <p>
+        UPSC परीक्षा और भर्ती से संबंधित आधिकारिक जानकारी।
+      </p>
+
+      <a
+        href="https://upsc.gov.in/"
+        target="_blank"
+        class="btn"
+      >
+        Visit Website →
+      </a>
+
+    </div>
+
+
+    <!-- IMPORTANT NOTICE -->
+
+    <div class="notice">
+
+      <strong>⚠️ महत्वपूर्ण सूचना:</strong>
+
+      <br>
+
+      किसी भी आवेदन या भुगतान से पहले वेबसाइट का
+      Official URL जरूर जाँचें। केवल आधिकारिक वेबसाइट
+      पर उपलब्ध जानकारी पर भरोसा करें।
+
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h3>SUJEET ONLINE CENTRE</h3>
+
+    <p>Learn • Grow • Succeed</p>
+
+    <div class="footer-links">
+
+      <a href="index.html">Home</a>
+      <a href="job.html">Jobs</a>
+      <a href="latest.html">Latest Update</a>
+      <a href="admit-card.html">Admit Card</a>
+      <a href="result.html">Result</a>
+      <a href="answer-key.html">Answer Key</a>
+      <a href="admission.html">Admission</a>
+      <a href="scholarship.html">Scholarship</a>
+      <a href="notice.html">Notice</a>
+      <a href="important-links.html">Important Links</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="terms.html">Terms & Conditions</a>
+
+    </div>
+
+    <p>
+      © 2026 Sujeet Online Centre. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    function searchLinks() {
+
+      let input =
+        document
+          .getElementById("searchInput")
+          .value
+          .toLowerCase()
+          .trim();
+
+      let cards =
+        document.querySelectorAll(".link-card");
+
+      cards.forEach(function(card) {
+
+        let text =
+          card.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+
+      });
+
+    }
+
+  </script>
+
+</body>
+          </html>
