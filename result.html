@@ -4,15 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Latest Result - Sujeet Online Centre</title>
-  <meta name="description" content="Sujeet Online Centre - Latest Exam Results और सरकारी परीक्षा परिणाम।">
+  <title>Result - Sujeet Online Centre</title>
+
+  <meta name="description"
+    content="Sujeet Online Centre - Latest Exam Results, Bihar Board Result और University Result की जानकारी।">
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
@@ -20,26 +23,154 @@
       color: #222;
     }
 
-    header {
-      background: linear-gradient(135deg, #0d47a1, #1976d2);
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
+    a {
+      text-decoration: none;
     }
 
-    header h1 {
-      font-size: 28px;
+    /* ================= HEADER ================= */
+
+    header {
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .header-top {
+      max-width: 1200px;
+      min-height: 70px;
+      margin: auto;
+      padding: 7px 15px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: #111;
+    }
+
+    .brand-name span {
+      color: #185dd8;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .home-btn {
+      background: #35109b;
+      color: white;
+      padding: 9px 14px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    /* ================= NAV ================= */
+
+    nav {
+      background: white;
+      border-top: 1px solid #eee;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      min-height: 45px;
+      margin: auto;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      padding: 5px;
+    }
+
+    .nav-inner a {
+      color: #222;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav-inner a:hover {
+      color: #1559d6;
+    }
+
+    /* ================= MOBILE MENU ================= */
+
+    .mobile-menu {
+      display: none;
+      background: white;
+      border-top: 1px solid #ddd;
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 13px 18px;
+      color: #222;
+      border-bottom: 1px solid #eee;
+      font-weight: 600;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      background: linear-gradient(
+        135deg,
+        #0d47a1,
+        #1976d2
+      );
+
+      color: white;
+      text-align: center;
+      padding: 40px 15px;
+    }
+
+    .hero h1 {
+      font-size: 30px;
       margin-bottom: 8px;
     }
 
-    header p {
+    .hero p {
       font-size: 15px;
     }
 
+    /* ================= CONTAINER ================= */
+
     .container {
-      width: 92%;
+      width: calc(100% - 30px);
       max-width: 1000px;
-      margin: 25px auto;
+      margin: 30px auto;
     }
 
     .page-title {
@@ -57,29 +188,42 @@
       margin-top: 6px;
     }
 
+    /* ================= SEARCH ================= */
+
     .search-box {
       background: white;
       padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      border-radius: 10px;
+
+      box-shadow:
+        0 3px 12px rgba(0,0,0,0.08);
+
       margin-bottom: 20px;
     }
 
     .search-box input {
       width: 100%;
       padding: 13px;
+
       border: 1px solid #ddd;
       border-radius: 8px;
+
       font-size: 15px;
       outline: none;
     }
+
+    /* ================= RESULT CARD ================= */
 
     .card {
       background: white;
       padding: 20px;
       margin-bottom: 18px;
+
       border-radius: 12px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+      box-shadow:
+        0 3px 12px rgba(0,0,0,0.08);
+
       border-left: 5px solid #1976d2;
     }
 
@@ -109,40 +253,121 @@
 
     .btn {
       display: inline-block;
-      text-decoration: none;
+
       background: #1976d2;
       color: white;
+
       padding: 11px 18px;
       border-radius: 7px;
+
       font-weight: bold;
+      transition: 0.2s;
     }
 
     .btn:hover {
       background: #0d47a1;
     }
 
+    /* ================= NOTICE ================= */
+
     .notice {
       background: #fff8e1;
       border-left: 5px solid #ffb300;
+
       padding: 15px;
       margin-top: 25px;
+
       border-radius: 8px;
+
       color: #555;
       line-height: 1.6;
     }
 
+    /* ================= FOOTER ================= */
+
     footer {
       margin-top: 35px;
-      background: #102a43;
+
+      background: #111;
       color: white;
+
       text-align: center;
-      padding: 20px 10px;
-      font-size: 14px;
+      padding: 28px 10px;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 23px;
+    footer h3 {
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      max-width: 900px;
+      margin: 18px auto;
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+    }
+
+    .footer-links a {
+      color: #ddd;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media(max-width:800px) {
+
+      .brand-name {
+        font-size: 15px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+      }
+
+    }
+
+    @media(max-width:600px) {
+
+      .logo {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .home-btn {
+        font-size: 12px;
+        padding: 8px 11px;
+      }
+
+      .hero {
+        padding: 35px 12px;
+      }
+
+      .hero h1 {
+        font-size: 25px;
+      }
+
+      .container {
+        width: calc(100% - 20px);
       }
 
       .page-title h2 {
@@ -152,107 +377,458 @@
       .card {
         padding: 16px;
       }
+
     }
+
   </style>
 </head>
 
 <body>
 
+
+  <!-- ================= HEADER ================= -->
+
   <header>
-    <h1>Sujeet Online Centre</h1>
-    <p>Online Form • Admit Card • Result • सरकारी नौकरी Updates</p>
+
+    <div class="header-top">
+
+      <a href="index.html" class="brand">
+
+        <img
+          src="logo.png"
+          class="logo"
+          alt="Sujeet Online Centre"
+        >
+
+        <div class="brand-name">
+          SUJEET <span>ONLINE CENTRE</span>
+        </div>
+
+      </a>
+
+      <div class="header-right">
+
+        <a href="index.html" class="home-btn">
+          ← Home
+        </a>
+
+        <span
+          class="menu-btn"
+          onclick="toggleMenu()"
+        >
+          ☰
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- DESKTOP NAV -->
+
+    <nav>
+
+      <div class="nav-inner">
+
+        <a href="index.html">Home</a>
+
+        <a href="job.html">Latest Jobs</a>
+
+        <a href="latest.html">Latest Update</a>
+
+        <a href="admit-card.html">Admit Card</a>
+
+        <a href="result.html">Result</a>
+
+        <a href="answer-key.html">Answer Key</a>
+
+        <a href="admission.html">Admission</a>
+
+        <a href="scholarship.html">Scholarship</a>
+
+        <a href="notice.html">Notice</a>
+
+        <a href="important-links.html">Important Links</a>
+
+      </div>
+
+    </nav>
+
+
+    <!-- MOBILE NAV -->
+
+    <div
+      class="mobile-menu"
+      id="mobileMenu"
+    >
+
+      <a href="index.html">🏠 Home</a>
+
+      <a href="job.html">💼 Latest Jobs</a>
+
+      <a href="latest.html">📰 Latest Update</a>
+
+      <a href="admit-card.html">🎫 Admit Card</a>
+
+      <a href="result.html">📊 Result</a>
+
+      <a href="answer-key.html">🔑 Answer Key</a>
+
+      <a href="admission.html">🎓 Admission</a>
+
+      <a href="scholarship.html">💰 Scholarship</a>
+
+      <a href="notice.html">📢 Notice</a>
+
+      <a href="important-links.html">🔗 Important Links</a>
+
+      <a href="about.html">ℹ️ About Us</a>
+
+      <a href="contact.html">📞 Contact Us</a>
+
+    </div>
+
   </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <h1>
+      📊 Latest Results
+    </h1>
+
+    <p>
+      सभी महत्वपूर्ण परीक्षा के Results यहाँ देखें
+    </p>
+
+  </section>
+
+
+  <!-- ================= CONTENT ================= -->
 
   <main class="container">
 
     <div class="page-title">
-      <h2>📊 Latest Results</h2>
-      <p>सभी महत्वपूर्ण परीक्षा के Results यहाँ देखें</p>
+
+      <h2>
+        Latest Results
+      </h2>
+
+      <p>
+        परीक्षा Result और Marksheet से संबंधित जानकारी
+      </p>
+
     </div>
 
+
+    <!-- SEARCH -->
+
     <div class="search-box">
+
       <input
         type="text"
         id="searchInput"
         placeholder="Result खोजें..."
         onkeyup="searchResult()"
       >
+
     </div>
 
-    <!-- Result 1 -->
+
+    <!-- ================= RESULT 1 ================= -->
+
     <div class="card result-card">
 
-      <h3>Exam Result - Example Exam</h3>
+      <h3>
+        Bihar Board Matric Result
+      </h3>
 
       <p>
-        इस परीक्षा का Result जारी होने पर नीचे दिए गए लिंक से अपना परिणाम देखें।
+        बिहार बोर्ड मैट्रिक परीक्षा के Result से संबंधित
+        महत्वपूर्ण जानकारी और Result Link यहाँ मिलेगा।
       </p>
 
       <div class="details">
-        <div><strong>📅 Result Date:</strong> जल्द घोषित होगी</div>
-        <div><strong>📄 Status:</strong> Available Soon</div>
-        <div><strong>🏛️ Department:</strong> संबंधित विभाग</div>
+
+        <div>
+          <strong>📅 Result Date:</strong>
+          जल्द घोषित होगी
+        </div>
+
+        <div>
+          <strong>📄 Status:</strong>
+          Available Soon
+        </div>
+
+        <div>
+          <strong>🏛️ Board:</strong>
+          Bihar School Examination Board
+        </div>
+
       </div>
 
-      <a href="#" class="btn">Check Result</a>
+      <a href="#" class="btn">
+        Check Result
+      </a>
 
     </div>
 
-    <!-- Result 2 -->
+
+    <!-- ================= RESULT 2 ================= -->
+
     <div class="card result-card">
 
-      <h3>Exam Result - Example 2</h3>
+      <h3>
+        Bihar Board Inter Result
+      </h3>
 
       <p>
-        उम्मीदवार नीचे दिए गए लिंक से अपना परीक्षा परिणाम देख सकते हैं।
+        बिहार बोर्ड इंटर परीक्षा के Result से संबंधित
+        जानकारी और Result Link यहाँ मिलेगा।
       </p>
 
       <div class="details">
-        <div><strong>📅 Result Date:</strong> जल्द घोषित होगी</div>
-        <div><strong>📄 Status:</strong> Available Soon</div>
-        <div><strong>🏛️ Department:</strong> संबंधित विभाग</div>
+
+        <div>
+          <strong>📅 Result Date:</strong>
+          जल्द घोषित होगी
+        </div>
+
+        <div>
+          <strong>📄 Status:</strong>
+          Available Soon
+        </div>
+
+        <div>
+          <strong>🏛️ Board:</strong>
+          Bihar School Examination Board
+        </div>
+
       </div>
 
-      <a href="#" class="btn">Check Result</a>
+      <a href="#" class="btn">
+        Check Result
+      </a>
 
     </div>
+
+
+    <!-- ================= RESULT 3 ================= -->
+
+    <div class="card result-card">
+
+      <h3>
+        University Semester Result
+      </h3>
+
+      <p>
+        विभिन्न विश्वविद्यालयों के Semester Result और
+        परीक्षा परिणाम की जानकारी यहाँ देखें।
+      </p>
+
+      <div class="details">
+
+        <div>
+          <strong>📅 Result Date:</strong>
+          विश्वविद्यालय के अनुसार
+        </div>
+
+        <div>
+          <strong>📄 Status:</strong>
+          Check Official Website
+        </div>
+
+        <div>
+          <strong>🏛️ Category:</strong>
+          University Result
+        </div>
+
+      </div>
+
+      <a href="#" class="btn">
+        Check Result
+      </a>
+
+    </div>
+
+
+    <!-- ================= RESULT 4 ================= -->
+
+    <div class="card result-card">
+
+      <h3>
+        Competitive Exam Result
+      </h3>
+
+      <p>
+        विभिन्न प्रतियोगी परीक्षाओं के Result और
+        Merit List की जानकारी यहाँ देखें।
+      </p>
+
+      <div class="details">
+
+        <div>
+          <strong>📅 Result Date:</strong>
+          जल्द घोषित होगी
+        </div>
+
+        <div>
+          <strong>📄 Status:</strong>
+          Available Soon
+        </div>
+
+        <div>
+          <strong>🏛️ Category:</strong>
+          Competitive Exam
+        </div>
+
+      </div>
+
+      <a href="#" class="btn">
+        Check Result
+      </a>
+
+    </div>
+
+
+    <!-- ================= NOTICE ================= -->
 
     <div class="notice">
-      <strong>⚠️ महत्वपूर्ण सूचना:</strong><br>
-      Result देखने से पहले अपना Roll Number, Registration Number
-      और Date of Birth जैसी आवश्यक जानकारी तैयार रखें।
+
+      <strong>⚠️ महत्वपूर्ण सूचना:</strong>
+
+      <br>
+
+      Result देखने से पहले अपना Roll Number,
+      Registration Number और Date of Birth जैसी
+      आवश्यक जानकारी तैयार रखें।
+
     </div>
 
   </main>
 
+
+  <!-- ================= FOOTER ================= -->
+
   <footer>
-    © 2026 Sujeet Online Centre. All Rights Reserved.
+
+    <h3>
+      SUJEET ONLINE CENTRE
+    </h3>
+
+    <p>
+      Learn • Grow • Succeed
+    </p>
+
+
+    <div class="footer-links">
+
+      <a href="index.html">Home</a>
+
+      <a href="job.html">Jobs</a>
+
+      <a href="latest.html">Latest Update</a>
+
+      <a href="admit-card.html">Admit Card</a>
+
+      <a href="result.html">Result</a>
+
+      <a href="answer-key.html">Answer Key</a>
+
+      <a href="admission.html">Admission</a>
+
+      <a href="scholarship.html">Scholarship</a>
+
+      <a href="notice.html">Notice</a>
+
+      <a href="important-links.html">Important Links</a>
+
+      <a href="about.html">About</a>
+
+      <a href="contact.html">Contact</a>
+
+      <a href="privacy-policy.html">Privacy Policy</a>
+
+      <a href="disclaimer.html">Disclaimer</a>
+
+      <a href="terms.html">Terms & Conditions</a>
+
+    </div>
+
+
+    <p>
+      © 2026 Sujeet Online Centre. All Rights Reserved.
+    </p>
+
   </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
 
   <script>
 
+    /* MOBILE MENU */
+
+    function toggleMenu() {
+
+      document
+        .getElementById("mobileMenu")
+        .classList.toggle("active");
+
+    }
+
+
+    /* RESULT SEARCH */
+
     function searchResult() {
 
-      let input = document
-        .getElementById("searchInput")
-        .value
-        .toLowerCase();
+      let input =
+        document
+          .getElementById("searchInput")
+          .value
+          .toLowerCase()
+          .trim();
 
-      let cards = document.querySelectorAll(".result-card");
+      let cards =
+        document.querySelectorAll(".result-card");
 
       cards.forEach(function(card) {
 
-        let text = card.innerText.toLowerCase();
+        let text =
+          card.innerText.toLowerCase();
 
         if (text.includes(input)) {
+
           card.style.display = "block";
+
         } else {
+
           card.style.display = "none";
+
         }
 
       });
 
     }
+
+
+    /* CLOSE MOBILE MENU */
+
+    document
+      .querySelectorAll(".mobile-menu a")
+      .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+          document
+            .getElementById("mobileMenu")
+            .classList.remove("active");
+
+        });
+
+      });
 
   </script>
 
