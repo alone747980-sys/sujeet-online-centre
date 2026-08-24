@@ -1,1 +1,459 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Contact Us - Sujeet Online Centre</title>
+
+  <meta name="description"
+    content="Sujeet Online Centre से संपर्क करें। Contact, WhatsApp और Telegram की जानकारी।">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #222;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .header {
+      max-width: 1100px;
+      min-height: 70px;
+      margin: auto;
+      padding: 7px 15px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .brand-name span {
+      color: #185dd8;
+    }
+
+    .home-btn {
+      background: #35109b;
+      color: white;
+      padding: 9px 15px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: linear-gradient(135deg,#ed1429,#a51999,#172de4);
+      color: white;
+      text-align: center;
+      padding: 45px 15px;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 15px;
+    }
+
+    .container {
+      width: calc(100% - 30px);
+      max-width: 950px;
+      margin: 30px auto;
+    }
+
+    .box {
+      background: white;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+
+      box-shadow:
+        0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .box h2 {
+      color: #35109b;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .box p {
+      color: #555;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 18px;
+    }
+
+    .contact-card {
+      background: #f7f5ff;
+      border: 1px solid #ddd;
+      border-radius: 9px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .contact-card .icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .contact-card h3 {
+      color: #35109b;
+      margin-bottom: 7px;
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      margin-bottom: 13px;
+    }
+
+    .btn {
+      display: inline-block;
+      color: white;
+      padding: 10px 17px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .whatsapp {
+      background: #25d366;
+    }
+
+    .telegram {
+      background: #229ed9;
+    }
+
+    .email {
+      background: #35109b;
+    }
+
+    .notice {
+      background: #fff8e1;
+      border-left: 5px solid #ffb300;
+      padding: 16px;
+      border-radius: 8px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 28px 10px;
+      margin-top: 35px;
+    }
+
+    footer h3 {
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      max-width: 900px;
+      margin: 18px auto;
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+    }
+
+    .footer-links a {
+      color: #ddd;
+      font-size: 13px;
+    }
+
+    @media(max-width:600px) {
+
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .logo {
+        width: 48px;
+        height: 48px;
+      }
+
+      .home-btn {
+        font-size: 12px;
+        padding: 8px 11px;
+      }
+
+      .hero {
+        padding: 35px 12px;
+      }
+
+      .hero h1 {
+        font-size: 25px;
+      }
+
+      .container {
+        width: calc(100% - 20px);
+      }
+
+      .box {
+        padding: 18px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="header">
+
+      <a href="index.html" class="brand">
+
+        <img
+          src="logo.png"
+          class="logo"
+          alt="Sujeet Online Centre"
+        >
+
+        <div class="brand-name">
+          SUJEET <span>ONLINE CENTRE</span>
+        </div>
+
+      </a>
+
+      <a href="index.html" class="home-btn">
+        ← Home
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h1>📞 Contact Us</h1>
+
+    <p>
+      Sujeet Online Centre से संपर्क करें
+    </p>
+
+  </section>
+
+
+  <!-- CONTENT -->
+
+  <main class="container">
+
+    <section class="box">
+
+      <h2>हमसे संपर्क करें</h2>
+
+      <p>
+        अगर आपको हमारी वेबसाइट से संबंधित कोई जानकारी,
+        सुझाव या समस्या बतानी है, तो नीचे दिए गए माध्यमों
+        से संपर्क कर सकते हैं।
+      </p>
+
+
+      <div class="contact-grid">
+
+        <!-- WHATSAPP -->
+
+        <div class="contact-card">
+
+          <div class="icon">🟢</div>
+
+          <h3>WhatsApp</h3>
+
+          <p>
+            WhatsApp पर हमसे संपर्क करें।
+          </p>
+
+          <!-- अपना WhatsApp नंबर यहाँ डालें -->
+          <a
+            href="https://wa.me/91XXXXXXXXXX"
+            target="_blank"
+            class="btn whatsapp"
+          >
+            WhatsApp करें
+          </a>
+
+        </div>
+
+
+        <!-- TELEGRAM -->
+
+        <div class="contact-card">
+
+          <div class="icon">🔵</div>
+
+          <h3>Telegram</h3>
+
+          <p>
+            Latest Updates के लिए Telegram से जुड़ें।
+          </p>
+
+          <!-- अपना Telegram username/link यहाँ डालें -->
+          <a
+            href="https://t.me/YourTelegramUsername"
+            target="_blank"
+            class="btn telegram"
+          >
+            Telegram Join करें
+          </a>
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="contact-card">
+
+          <div class="icon">📧</div>
+
+          <h3>Email</h3>
+
+          <p>
+            Email के माध्यम से हमसे संपर्क करें।
+          </p>
+
+          <!-- अपना Email यहाँ डालें -->
+          <a
+            href="mailto:youremail@example.com"
+            class="btn email"
+          >
+            Email करें
+          </a>
+
+        </div>
+
+
+        <!-- WEBSITE -->
+
+        <div class="contact-card">
+
+          <div class="icon">🌐</div>
+
+          <h3>Website</h3>
+
+          <p>
+            Sujeet Online Centre की मुख्य वेबसाइट।
+          </p>
+
+          <a
+            href="index.html"
+            class="btn email"
+          >
+            Website खोलें
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- IMPORTANT NOTICE -->
+
+    <section class="notice">
+
+      <strong>⚠️ महत्वपूर्ण सूचना:</strong>
+
+      <br>
+
+      कृपया अपना निजी Password, OTP, UPI PIN या बैंक
+      संबंधी संवेदनशील जानकारी किसी के साथ साझा न करें।
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h3>SUJEET ONLINE CENTRE</h3>
+
+    <p>Learn • Grow • Succeed</p>
+
+    <div class="footer-links">
+
+      <a href="index.html">Home</a>
+      <a href="job.html">Jobs</a>
+      <a href="latest.html">Latest Update</a>
+      <a href="admit-card.html">Admit Card</a>
+      <a href="result.html">Result</a>
+      <a href="admission.html">Admission</a>
+      <a href="scholarship.html">Scholarship</a>
+      <a href="notice.html">Notice</a>
+      <a href="important-links.html">Important Links</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="terms.html">Terms & Conditions</a>
+
+    </div>
+
+    <p>
+      © 2026 Sujeet Online Centre. All Rights Reserved.
+    </p>
+
+  </footer>
+
+</body>
+</html>
