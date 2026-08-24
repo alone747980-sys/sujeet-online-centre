@@ -275,4 +275,535 @@
       border-left: 5px solid #ffb300;
 
       padding: 15px;
-     
+      margin-top: 25px;
+
+      border-radius: 8px;
+
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      margin-top: 35px;
+
+      background: #111;
+      color: white;
+
+      text-align: center;
+      padding: 28px 10px;
+    }
+
+    footer h3 {
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      max-width: 900px;
+      margin: 18px auto;
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+    }
+
+    .footer-links a {
+      color: #ddd;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media(max-width:800px) {
+
+      .brand-name {
+        font-size: 15px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+      }
+
+    }
+
+    @media(max-width:600px) {
+
+      .logo {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .home-btn {
+        font-size: 12px;
+        padding: 8px 11px;
+      }
+
+      .hero {
+        padding: 35px 12px;
+      }
+
+      .hero h1 {
+        font-size: 25px;
+      }
+
+      .container {
+        width: calc(100% - 20px);
+      }
+
+      .page-title h2 {
+        font-size: 21px;
+      }
+
+      .card {
+        padding: 16px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+  <!-- ================= HEADER ================= -->
+
+  <header>
+
+    <div class="header-top">
+
+      <a href="index.html" class="brand">
+
+        <img
+          src="logo.png"
+          class="logo"
+          alt="Sujeet Online Centre"
+        >
+
+        <div class="brand-name">
+          SUJEET <span>ONLINE CENTRE</span>
+        </div>
+
+      </a>
+
+      <div class="header-right">
+
+        <a href="index.html" class="home-btn">
+          ← Home
+        </a>
+
+        <span
+          class="menu-btn"
+          onclick="toggleMenu()"
+        >
+          ☰
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- DESKTOP NAV -->
+
+    <nav>
+
+      <div class="nav-inner">
+
+        <a href="index.html">Home</a>
+
+        <a href="job.html">Latest Jobs</a>
+
+        <a href="latest.html">Latest Update</a>
+
+        <a href="admit-card.html">Admit Card</a>
+
+        <a href="result.html">Result</a>
+
+        <a href="answer-key.html">Answer Key</a>
+
+        <a href="admission.html">Admission</a>
+
+        <a href="scholarship.html">Scholarship</a>
+
+        <a href="notice.html">Notice</a>
+
+        <a href="important-links.html">Important Links</a>
+
+      </div>
+
+    </nav>
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+      class="mobile-menu"
+      id="mobileMenu"
+    >
+
+      <a href="index.html">🏠 Home</a>
+      <a href="job.html">💼 Latest Jobs</a>
+      <a href="latest.html">📰 Latest Update</a>
+      <a href="admit-card.html">🎫 Admit Card</a>
+      <a href="result.html">📊 Result</a>
+      <a href="answer-key.html">🔑 Answer Key</a>
+      <a href="admission.html">🎓 Admission</a>
+      <a href="scholarship.html">💰 Scholarship</a>
+      <a href="notice.html">📢 Notice</a>
+      <a href="important-links.html">🔗 Important Links</a>
+      <a href="about.html">ℹ️ About Us</a>
+      <a href="contact.html">📞 Contact Us</a>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <h1>
+      🎓 Latest Admission
+    </h1>
+
+    <p>
+      School, College और University Admission की जानकारी
+    </p>
+
+  </section>
+
+
+  <!-- ================= CONTENT ================= -->
+
+  <main class="container">
+
+    <div class="page-title">
+
+      <h2>
+        Latest Admission
+      </h2>
+
+      <p>
+        सभी महत्वपूर्ण Admission Form और आवेदन की जानकारी
+      </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Admission खोजें..."
+        onkeyup="searchAdmission()"
+      >
+
+    </div>
+
+
+    <!-- ================= ADMISSION 1 ================= -->
+
+    <div class="card admission-card">
+
+      <h3>
+        Bihar Board Class 11th Admission
+      </h3>
+
+      <p>
+        कक्षा 11वीं में Admission से संबंधित आवेदन,
+        प्रक्रिया और महत्वपूर्ण जानकारी यहाँ देखें।
+      </p>
+
+      <div class="details">
+
+        <div>
+          <strong>📅 Application Date:</strong>
+          जल्द घोषित होगी
+        </div>
+
+        <div>
+          <strong>📄 Status:</strong>
+          Available Soon
+        </div>
+
+        <div>
+          <strong>🏫 Category:</strong>
+          Class 11th Admission
+        </div>
+
+      </div>
+
+      <a href="#" class="btn">
+        Apply / Details
+      </a>
+
+    </div>
+
+
+    <!-- ================= ADMISSION 2 ================= -->
+
+    <div class="card admission-card">
+
+      <h3>
+        University Admission 2026
+      </h3>
+
+      <p>
+        विभिन्न विश्वविद्यालयों में Undergraduate और
+        Postgraduate Admission की जानकारी यहाँ देखें।
+      </p>
+
+      <div class="details">
+
+        <div>
+          <strong>📅 Application Date:</strong>
+          विश्वविद्यालय के अनुसार
+        </div>
+
+        <div>
+          <strong>📄 Status:</strong>
+          Check Official Website
+        </div>
+
+        <div>
+          <strong>🏛️ Category:</strong>
+          University Admission
+        </div>
+
+      </div>
+
+      <a href="#" class="btn">
+        Apply / Details
+      </a>
+
+    </div>
+
+
+    <!-- ================= ADMISSION 3 ================= -->
+
+    <div class="card admission-card">
+
+      <h3>
+        College Admission
+      </h3>
+
+      <p>
+        कॉलेज में नामांकन से संबंधित आवेदन प्रक्रिया,
+        Merit List और जरूरी जानकारी यहाँ देखें।
+      </p>
+
+      <div class="details">
+
+        <div>
+          <strong>📅 Admission Date:</strong>
+          जल्द घोषित होगी
+        </div>
+
+        <div>
+          <strong>📄 Status:</strong>
+          Available Soon
+        </div>
+
+        <div>
+          <strong>🏫 Category:</strong>
+          College Admission
+        </div>
+
+      </div>
+
+      <a href="#" class="btn">
+        Apply / Details
+      </a>
+
+    </div>
+
+
+    <!-- ================= ADMISSION 4 ================= -->
+
+    <div class="card admission-card">
+
+      <h3>
+        ITI / Polytechnic Admission
+      </h3>
+
+      <p>
+        ITI और Polytechnic Admission से संबंधित
+        आवेदन और जरूरी जानकारी यहाँ देखें।
+      </p>
+
+      <div class="details">
+
+        <div>
+          <strong>📅 Application Date:</strong>
+          जल्द घोषित होगी
+        </div>
+
+        <div>
+          <strong>📄 Status:</strong>
+          Available Soon
+        </div>
+
+        <div>
+          <strong>🏫 Category:</strong>
+          Technical Admission
+        </div>
+
+      </div>
+
+      <a href="#" class="btn">
+        Apply / Details
+      </a>
+
+    </div>
+
+
+    <!-- ================= NOTICE ================= -->
+
+    <div class="notice">
+
+      <strong>⚠️ महत्वपूर्ण सूचना:</strong>
+
+      <br>
+
+      Admission Form भरने से पहले Eligibility,
+      Required Documents, Application Date और
+      Official Notification जरूर पढ़ें।
+
+    </div>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <h3>
+      SUJEET ONLINE CENTRE
+    </h3>
+
+    <p>
+      Learn • Grow • Succeed
+    </p>
+
+    <div class="footer-links">
+
+      <a href="index.html">Home</a>
+      <a href="job.html">Jobs</a>
+      <a href="latest.html">Latest Update</a>
+      <a href="admit-card.html">Admit Card</a>
+      <a href="result.html">Result</a>
+      <a href="answer-key.html">Answer Key</a>
+      <a href="admission.html">Admission</a>
+      <a href="scholarship.html">Scholarship</a>
+      <a href="notice.html">Notice</a>
+      <a href="important-links.html">Important Links</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="terms.html">Terms & Conditions</a>
+
+    </div>
+
+    <p>
+      © 2026 Sujeet Online Centre. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    /* MOBILE MENU */
+
+    function toggleMenu() {
+
+      document
+        .getElementById("mobileMenu")
+        .classList.toggle("active");
+
+    }
+
+
+    /* ADMISSION SEARCH */
+
+    function searchAdmission() {
+
+      let input =
+        document
+          .getElementById("searchInput")
+          .value
+          .toLowerCase()
+          .trim();
+
+      let cards =
+        document.querySelectorAll(".admission-card");
+
+      cards.forEach(function(card) {
+
+        let text =
+          card.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+
+          card.style.display = "block";
+
+        } else {
+
+          card.style.display = "none";
+
+        }
+
+      });
+
+    }
+
+
+    /* CLOSE MOBILE MENU */
+
+    document
+      .querySelectorAll(".mobile-menu a")
+      .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+          document
+            .getElementById("mobileMenu")
+            .classList.remove("active");
+
+        });
+
+      });
+
+  </script>
+
+</body>
+        </html>
