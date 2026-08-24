@@ -21,16 +21,17 @@
 
     /* HEADER */
     header {
-      height: 78px;
-      background: white;
+      width: 100%;
+      min-height: 75px;
+      background: #ffffff;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 8px 18px;
+      padding: 8px 15px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 100;
     }
 
     .logo-area {
@@ -40,107 +41,122 @@
     }
 
     .logo {
-      width: 58px;
-      height: 58px;
+      width: 55px;
+      height: 55px;
       border-radius: 50%;
       object-fit: cover;
     }
 
     .site-name {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: bold;
-      color: #111;
+      color: #111111;
     }
 
     .menu-area {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 18px;
     }
 
     .search-icon {
       font-size: 27px;
       cursor: pointer;
+      color: #222;
     }
 
     .menu {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: bold;
       cursor: pointer;
+      color: #222;
     }
 
     /* HERO */
     .hero {
-      min-height: 600px;
-      padding: 90px 18px 50px;
+      width: 100%;
+      min-height: 500px;
+      padding: 80px 15px 50px;
       text-align: center;
-      background: linear-gradient(145deg, #f20d24, #a71991, #172de5);
+      background: linear-gradient(
+        135deg,
+        #f3132b,
+        #a9169d,
+        #172de5
+      );
     }
 
     .hero h1 {
       color: white;
-      font-size: 36px;
-      line-height: 1.35;
+      font-size: 34px;
+      line-height: 1.4;
       max-width: 800px;
-      margin: auto;
-      margin-bottom: 55px;
+      margin: 0 auto 50px;
     }
 
     /* SEARCH */
     .search-box {
-      display: flex;
+      width: 100%;
       max-width: 620px;
+      height: 62px;
       margin: auto;
-      height: 64px;
+      display: flex;
     }
 
     .search-box input {
       flex: 1;
+      height: 100%;
       border: none;
-      padding: 0 25px;
-      font-size: 19px;
       outline: none;
+      padding: 0 20px;
+      font-size: 18px;
     }
 
     .search-box button {
-      width: 100px;
+      width: 85px;
+      height: 100%;
       border: none;
-      background: #30343b;
+      background: #333333;
       color: white;
-      font-size: 28px;
+      font-size: 25px;
       cursor: pointer;
     }
 
     /* CARDS */
     .cards-container {
+      width: calc(100% - 30px);
       max-width: 1000px;
+      margin: 25px auto 40px;
+      padding: 20px;
+
       background: white;
-      margin: -5px auto 40px;
-      padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.15);
 
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      position: relative;
-      z-index: 10;
+      gap: 18px;
+
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
     }
 
     .card {
-      min-height: 125px;
-      border-radius: 9px;
+      min-height: 120px;
+      border-radius: 10px;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       text-align: center;
       padding: 15px;
+
       color: white;
-      font-size: 21px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.25s;
       text-decoration: none;
+
+      font-size: 19px;
+      font-weight: bold;
+
+      transition: 0.2s;
     }
 
     .card:hover {
@@ -148,9 +164,302 @@
       box-shadow: 0 7px 15px rgba(0,0,0,0.25);
     }
 
+    /* CARD COLORS */
+
     .red {
-      background: linear-gradient(135deg, #f01438, #bd0031);
+      background: linear-gradient(135deg, #f20d32, #bd0035);
     }
 
     .purple {
-      background: linear-gradient(135deg, #8d19
+      background: linear-gradient(135deg, #9417a9, #4d087b);
+    }
+
+    .green {
+      background: linear-gradient(135deg, #18a45b, #087a3d);
+    }
+
+    .pink {
+      background: linear-gradient(135deg, #ef13bb, #9d0bbd);
+    }
+
+    .blue {
+      background: linear-gradient(135deg, #2945e8, #0923a8);
+    }
+
+    .gold {
+      background: linear-gradient(135deg, #a28b10, #625200);
+    }
+
+    /* FOOTER */
+
+    footer {
+      width: 100%;
+      background: #111111;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 650px) {
+
+      header {
+        min-height: 70px;
+        padding: 7px 10px;
+      }
+
+      .logo {
+        width: 50px;
+        height: 50px;
+      }
+
+      .site-name {
+        font-size: 15px;
+      }
+
+      .menu-area {
+        gap: 10px;
+      }
+
+      .search-icon {
+        font-size: 23px;
+      }
+
+      .menu {
+        font-size: 14px;
+      }
+
+      .hero {
+        min-height: 520px;
+        padding: 65px 15px 40px;
+      }
+
+      .hero h1 {
+        font-size: 27px;
+        margin-bottom: 45px;
+      }
+
+      .search-box {
+        height: 57px;
+      }
+
+      .search-box input {
+        font-size: 16px;
+      }
+
+      .search-box button {
+        width: 70px;
+      }
+
+      .cards-container {
+        width: calc(100% - 20px);
+        padding: 15px;
+        gap: 12px;
+      }
+
+      .card {
+        min-height: 105px;
+        font-size: 16px;
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 380px) {
+
+      .site-name {
+        font-size: 14px;
+      }
+
+      .hero h1 {
+        font-size: 24px;
+      }
+
+      .card {
+        font-size: 14px;
+        min-height: 95px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo-area">
+
+      <img
+        src="logo.png"
+        class="logo"
+        alt="Sujeet Online Centre Logo"
+      >
+
+      <div class="site-name">
+        SUJEET ONLINE CENTRE
+      </div>
+
+    </div>
+
+    <div class="menu-area">
+
+      <div
+        class="search-icon"
+        onclick="focusSearch()"
+      >
+        🔍
+      </div>
+
+      <div class="menu">
+        ☰ MENU
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+
+    <h1>
+      Sujeet Online Centre के<br>
+      Official Website में आपका<br>
+      स्वागत है।
+    </h1>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search..."
+        onkeyup="searchCards()"
+      >
+
+      <button onclick="searchCards()">
+        🔍
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- IMPORTANT LINKS -->
+
+  <section
+    class="cards-container"
+    id="cardsContainer"
+  >
+
+    <a href="#" class="card red">
+      बिहार बोर्ड की पल-पल की अपडेट
+    </a>
+
+    <a href="#" class="card purple">
+      मैट्रिक परीक्षा 2026 का रिजल्ट
+    </a>
+
+    <a href="#" class="card green">
+      इंटर परीक्षा 2026 का रिजल्ट
+    </a>
+
+    <a href="#" class="card red">
+      कक्षा 10वीं का PDF नोट्स
+    </a>
+
+    <a href="#" class="card pink">
+      कक्षा 1 से 12वीं तक छात्रवृत्ति
+    </a>
+
+    <a href="#" class="card purple">
+      मैट्रिक पास प्रोत्साहन राशि 2026
+    </a>
+
+    <a href="#" class="card gold">
+      इंटर पास प्रोत्साहन राशि 2026
+    </a>
+
+    <a href="#" class="card blue">
+      कक्षा 12वीं का PDF नोट्स
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Sujeet Online Centre
+    </p>
+
+    <p>
+      Learn • Grow • Succeed
+    </p>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    function focusSearch() {
+
+      document
+        .getElementById("searchInput")
+        .focus();
+
+    }
+
+
+    function searchCards() {
+
+      const input =
+        document
+          .getElementById("searchInput")
+          .value
+          .toLowerCase()
+          .trim();
+
+      const cards =
+        document.querySelectorAll(".card");
+
+
+      cards.forEach(function(card) {
+
+        const text =
+          card.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+
+          card.style.display = "flex";
+
+        } else {
+
+          card.style.display = "none";
+
+        }
+
+      });
+
+    }
+
+  </script>
+
+</body>
+</html>
