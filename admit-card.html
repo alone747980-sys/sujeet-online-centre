@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Admit Card - Sujeet Online Centre</title>
+
   <meta name="description" content="Sujeet Online Centre - Latest Admit Card, Exam Hall Ticket और प्रवेश पत्र की जानकारी।">
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
@@ -20,27 +22,154 @@
       color: #222;
     }
 
-    header {
-      background: linear-gradient(135deg, #0d47a1, #1976d2);
-      color: white;
-      padding: 25px 15px;
-      text-align: center;
+    a {
+      text-decoration: none;
     }
 
-    header h1 {
-      font-size: 28px;
+    /* ================= HEADER ================= */
+
+    header {
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .header-top {
+      max-width: 1200px;
+      min-height: 70px;
+      margin: auto;
+      padding: 7px 15px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: #111;
+    }
+
+    .brand-name span {
+      color: #185dd8;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .home-btn {
+      background: #35109b;
+      color: white;
+      padding: 9px 14px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    /* ================= NAVIGATION ================= */
+
+    nav {
+      background: white;
+      border-top: 1px solid #eee;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      min-height: 45px;
+      margin: auto;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      padding: 5px;
+    }
+
+    .nav-inner a {
+      color: #222;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav-inner a:hover {
+      color: #1559d6;
+    }
+
+    /* ================= MOBILE MENU ================= */
+
+    .mobile-menu {
+      display: none;
+      background: white;
+      border-top: 1px solid #ddd;
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 13px 18px;
+      color: #222;
+      border-bottom: 1px solid #eee;
+      font-weight: 600;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      background: linear-gradient(
+        135deg,
+        #0d47a1,
+        #1976d2
+      );
+
+      color: white;
+      text-align: center;
+      padding: 40px 15px;
+    }
+
+    .hero h1 {
+      font-size: 30px;
       margin-bottom: 8px;
     }
 
-    header p {
+    .hero p {
       font-size: 15px;
-      opacity: 0.95;
     }
 
+    /* ================= CONTAINER ================= */
+
     .container {
-      width: 92%;
+      width: calc(100% - 30px);
       max-width: 1000px;
-      margin: 25px auto;
+      margin: 30px auto;
     }
 
     .page-title {
@@ -58,29 +187,42 @@
       color: #666;
     }
 
+    /* ================= SEARCH ================= */
+
     .search-box {
       background: white;
       padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      border-radius: 10px;
+
+      box-shadow:
+        0 3px 12px rgba(0,0,0,0.08);
+
       margin-bottom: 20px;
     }
 
     .search-box input {
       width: 100%;
       padding: 13px;
+
       border: 1px solid #ddd;
       border-radius: 8px;
+
       outline: none;
       font-size: 15px;
     }
+
+    /* ================= CARDS ================= */
 
     .card {
       background: white;
       padding: 20px;
       margin-bottom: 18px;
+
       border-radius: 12px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+      box-shadow:
+        0 3px 12px rgba(0,0,0,0.08);
+
       border-left: 5px solid #1976d2;
     }
 
@@ -110,11 +252,13 @@
 
     .btn {
       display: inline-block;
-      text-decoration: none;
+
       background: #1976d2;
       color: white;
+
       padding: 11px 18px;
       border-radius: 7px;
+
       font-weight: bold;
       transition: 0.2s;
     }
@@ -123,28 +267,106 @@
       background: #0d47a1;
     }
 
+    /* ================= NOTICE ================= */
+
     .notice {
       background: #fff8e1;
       border-left: 5px solid #ffb300;
+
       padding: 15px;
       margin-top: 25px;
+
       border-radius: 8px;
+
       color: #555;
       line-height: 1.6;
     }
 
+    /* ================= FOOTER ================= */
+
     footer {
       margin-top: 35px;
-      background: #102a43;
+
+      background: #111;
       color: white;
+
       text-align: center;
-      padding: 20px 10px;
-      font-size: 14px;
+      padding: 28px 10px;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 23px;
+    footer h3 {
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      max-width: 900px;
+      margin: 18px auto;
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+    }
+
+    .footer-links a {
+      color: #ddd;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media(max-width:800px) {
+
+      .brand-name {
+        font-size: 15px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+      }
+
+    }
+
+    @media(max-width:600px) {
+
+      .logo {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .home-btn {
+        font-size: 12px;
+        padding: 8px 11px;
+      }
+
+      .hero {
+        padding: 35px 12px;
+      }
+
+      .hero h1 {
+        font-size: 25px;
+      }
+
+      .container {
+        width: calc(100% - 20px);
       }
 
       .page-title h2 {
@@ -154,40 +376,466 @@
       .card {
         padding: 16px;
       }
+
     }
+
   </style>
 </head>
 
 <body>
 
+
+  <!-- ================= HEADER ================= -->
+
   <header>
-    <h1>Sujeet Online Centre</h1>
-    <p>Online Form • Admit Card • Result • सरकारी नौकरी Updates</p>
+
+    <div class="header-top">
+
+      <a href="index.html" class="brand">
+
+        <img
+          src="logo.png"
+          class="logo"
+          alt="Sujeet Online Centre"
+        >
+
+        <div class="brand-name">
+          SUJEET <span>ONLINE CENTRE</span>
+        </div>
+
+      </a>
+
+      <div class="header-right">
+
+        <a href="index.html" class="home-btn">
+          ← Home
+        </a>
+
+        <span
+          class="menu-btn"
+          onclick="toggleMenu()"
+        >
+          ☰
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- DESKTOP NAV -->
+
+    <nav>
+
+      <div class="nav-inner">
+
+        <a href="index.html">Home</a>
+
+        <a href="job.html">Latest Jobs</a>
+
+        <a href="latest.html">Latest Update</a>
+
+        <a href="admit-card.html">Admit Card</a>
+
+        <a href="result.html">Result</a>
+
+        <a href="answer-key.html">Answer Key</a>
+
+        <a href="admission.html">Admission</a>
+
+        <a href="scholarship.html">Scholarship</a>
+
+        <a href="notice.html">Notice</a>
+
+        <a href="important-links.html">Important Links</a>
+
+      </div>
+
+    </nav>
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+      class="mobile-menu"
+      id="mobileMenu"
+    >
+
+      <a href="index.html">🏠 Home</a>
+
+      <a href="job.html">💼 Latest Jobs</a>
+
+      <a href="latest.html">📰 Latest Update</a>
+
+      <a href="admit-card.html">🎫 Admit Card</a>
+
+      <a href="result.html">📊 Result</a>
+
+      <a href="answer-key.html">🔑 Answer Key</a>
+
+      <a href="admission.html">🎓 Admission</a>
+
+      <a href="scholarship.html">💰 Scholarship</a>
+
+      <a href="notice.html">📢 Notice</a>
+
+      <a href="important-links.html">🔗 Important Links</a>
+
+      <a href="about.html">ℹ️ About Us</a>
+
+      <a href="contact.html">📞 Contact Us</a>
+
+    </div>
+
   </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <h1>
+      🎫 Latest Admit Card
+    </h1>
+
+    <p>
+      सभी महत्वपूर्ण परीक्षा के Admit Card यहाँ देखें
+    </p>
+
+  </section>
+
+
+  <!-- ================= CONTENT ================= -->
 
   <main class="container">
 
     <div class="page-title">
-      <h2>🎫 Latest Admit Card</h2>
-      <p>सभी महत्वपूर्ण परीक्षा के Admit Card यहाँ देखें</p>
+
+      <h2>
+        Latest Admit Card
+      </h2>
+
+      <p>
+        परीक्षा के Admit Card और Hall Ticket की जानकारी
+      </p>
+
     </div>
 
+
+    <!-- SEARCH -->
+
     <div class="search-box">
+
       <input
         type="text"
         id="searchInput"
         placeholder="Admit Card खोजें..."
         onkeyup="searchAdmitCard()"
       >
+
     </div>
 
-    <!-- Admit Card 1 -->
+
+    <!-- ================= ADMIT CARD 1 ================= -->
+
     <div class="card admit-card">
-      <h3>Admit Card / Hall Ticket - Example Exam</h3>
+
+      <h3>
+        Bihar Board Matric Exam Admit Card
+      </h3>
 
       <p>
-        इस परीक्षा का Admit Card जारी होने पर यहाँ से डाउनलोड करें।
+        बिहार बोर्ड मैट्रिक परीक्षा के Admit Card से संबंधित
+        महत्वपूर्ण जानकारी यहाँ देखें।
       </p>
 
       <div class="details">
-        <div><strong>
+
+        <div>
+          <strong>📅 Exam Date:</strong>
+          जल्द घोषित होगी
+        </div>
+
+        <div>
+          <strong>📄 Status:</strong>
+          Available Soon
+        </div>
+
+        <div>
+          <strong>🏛️ Board:</strong>
+          Bihar School Examination Board
+        </div>
+
+      </div>
+
+      <a href="#" class="btn">
+        Download Admit Card
+      </a>
+
+    </div>
+
+
+    <!-- ================= ADMIT CARD 2 ================= -->
+
+    <div class="card admit-card">
+
+      <h3>
+        Bihar Board Inter Exam Admit Card
+      </h3>
+
+      <p>
+        बिहार बोर्ड इंटर परीक्षा के Admit Card से संबंधित
+        जानकारी और डाउनलोड लिंक यहाँ मिलेगा।
+      </p>
+
+      <div class="details">
+
+        <div>
+          <strong>📅 Exam Date:</strong>
+          जल्द घोषित होगी
+        </div>
+
+        <div>
+          <strong>📄 Status:</strong>
+          Available Soon
+        </div>
+
+        <div>
+          <strong>🏛️ Board:</strong>
+          Bihar School Examination Board
+        </div>
+
+      </div>
+
+      <a href="#" class="btn">
+        Download Admit Card
+      </a>
+
+    </div>
+
+
+    <!-- ================= ADMIT CARD 3 ================= -->
+
+    <div class="card admit-card">
+
+      <h3>
+        STET Exam Admit Card
+      </h3>
+
+      <p>
+        STET परीक्षा के Admit Card और परीक्षा से संबंधित
+        महत्वपूर्ण जानकारी यहाँ देखें।
+      </p>
+
+      <div class="details">
+
+        <div>
+          <strong>📅 Exam Date:</strong>
+          जल्द घोषित होगी
+        </div>
+
+        <div>
+          <strong>📄 Status:</strong>
+          Available Soon
+        </div>
+
+        <div>
+          <strong>🏛️ Exam:</strong>
+          STET
+        </div>
+
+      </div>
+
+      <a href="#" class="btn">
+        Download Admit Card
+      </a>
+
+    </div>
+
+
+    <!-- ================= ADMIT CARD 4 ================= -->
+
+    <div class="card admit-card">
+
+      <h3>
+        Other Competitive Exam Admit Card
+      </h3>
+
+      <p>
+        विभिन्न प्रतियोगी परीक्षाओं के Admit Card और
+        Hall Ticket की जानकारी यहाँ देखें।
+      </p>
+
+      <div class="details">
+
+        <div>
+          <strong>📅 Exam Date:</strong>
+          जल्द घोषित होगी
+        </div>
+
+        <div>
+          <strong>📄 Status:</strong>
+          Available Soon
+        </div>
+
+        <div>
+          <strong>🏛️ Category:</strong>
+          Competitive Exam
+        </div>
+
+      </div>
+
+      <a href="#" class="btn">
+        Download Admit Card
+      </a>
+
+    </div>
+
+
+    <!-- ================= NOTICE ================= -->
+
+    <div class="notice">
+
+      <strong>⚠️ महत्वपूर्ण सूचना:</strong>
+
+      <br>
+
+      Admit Card डाउनलोड करने से पहले अपना
+      Registration Number, Date of Birth और अन्य
+      आवश्यक जानकारी तैयार रखें।
+
+    </div>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <h3>
+      SUJEET ONLINE CENTRE
+    </h3>
+
+    <p>
+      Learn • Grow • Succeed
+    </p>
+
+
+    <div class="footer-links">
+
+      <a href="index.html">Home</a>
+
+      <a href="job.html">Jobs</a>
+
+      <a href="latest.html">Latest Update</a>
+
+      <a href="admit-card.html">Admit Card</a>
+
+      <a href="result.html">Result</a>
+
+      <a href="answer-key.html">Answer Key</a>
+
+      <a href="admission.html">Admission</a>
+
+      <a href="scholarship.html">Scholarship</a>
+
+      <a href="notice.html">Notice</a>
+
+      <a href="important-links.html">Important Links</a>
+
+      <a href="about.html">About</a>
+
+      <a href="contact.html">Contact</a>
+
+      <a href="privacy-policy.html">
+        Privacy Policy
+      </a>
+
+      <a href="disclaimer.html">
+        Disclaimer
+      </a>
+
+      <a href="terms.html">
+        Terms & Conditions
+      </a>
+
+    </div>
+
+
+    <p>
+      © 2026 Sujeet Online Centre. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    /* MOBILE MENU */
+
+    function toggleMenu() {
+
+      document
+        .getElementById("mobileMenu")
+        .classList.toggle("active");
+
+    }
+
+
+    /* ADMIT CARD SEARCH */
+
+    function searchAdmitCard() {
+
+      let input =
+        document
+          .getElementById("searchInput")
+          .value
+          .toLowerCase()
+          .trim();
+
+      let cards =
+        document.querySelectorAll(".admit-card");
+
+      cards.forEach(function(card) {
+
+        let text =
+          card.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+
+          card.style.display = "block";
+
+        } else {
+
+          card.style.display = "none";
+
+        }
+
+      });
+
+    }
+
+
+    /* CLOSE MOBILE MENU AFTER CLICK */
+
+    document
+      .querySelectorAll(".mobile-menu a")
+      .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+          document
+            .getElementById("mobileMenu")
+            .classList.remove("active");
+
+        });
+
+      });
+
+  </script>
+
+</body>
+</html>
